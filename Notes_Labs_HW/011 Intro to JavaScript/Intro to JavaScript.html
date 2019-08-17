@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation gr__techtalentsouth_slides_com loaded ua-windows ua-firefox has-visible-scrollbars fonts-are-ready reveal-is-ready" data-account=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Intro to JavaScript</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Intro to JavaScript">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/70fd17ed931e98243012f71eff13601b/thumb.jpg?1564857886">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/intro-to-javascript-1511?token=uBeGgQ7E">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link href="Intro%20to%20JavaScript_files/css.css" rel="stylesheet" type="text/css" data-application-font="opensans">
+
+    <link rel="stylesheet" media="all" href="Intro%20to%20JavaScript_files/slides-2b712357092f86c1ae8835891d01f4694c873806772909994aae0.css">
+    <link rel="stylesheet" media="all" href="Intro%20to%20JavaScript_files/application-9fcd26d7c13113a4ea1d920b211ac9cee09f200031153fbe.css">
+    	<link rel="stylesheet" media="all" href="Intro%20to%20JavaScript_files/deck-v2-a333859a869636b15fcc330a6009c03deeb8f042543cfd557e69.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Tz3wdzPSlJeC8sNb1HuzRBGk/0XcwS4j2Tvm6EfDlRXbUcysH4HegzLLAlmflvqSLWLbGOqHcZdAmhzLN4/gUQ==">
+    <script type="application/javascript" async="" defer="defer" src="Intro%20to%20JavaScript_files/track.js"></script><script type="text/javascript" async="" src="Intro%20to%20JavaScript_files/f7sH7NavrjjvuGxByaw.js"></script><script async="" src="Intro%20to%20JavaScript_files/analytics.js"></script><script type="text/javascript">
+  if( !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    <!--[if lt IE 9]>
+    <script src="//assets.slid.es/assets/html5shiv-0bfa553ebc9c42abf66248f2f3feba0935da70b430bace410f80b72729c14820.js"></script>
+<![endif]-->
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Intro to JavaScript">
+	<meta name="twitter:description" content="A presentation created with Slides.">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/70fd17ed931e98243012f71eff13601b/thumb.jpg?1564857886">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon-trigger{display:block;width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><link rel="stylesheet" href="Intro%20to%20JavaScript_files/css_002.css"><style type="text/css"></style><script type="text/javascript" src="Intro%20to%20JavaScript_files/highlight-de2aa3b1c60901a5be52336f031352b88d7258d22505ebeeb29.js"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="Intro%20to%20JavaScript_files/zoom-db2ce8f5798992aca3c0ad9c22400bf562ea45c911b12d1dc7f36cbd.js"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body data-gr-c-s-loaded="true" style="transition: transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url('https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png')"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue">
+			<div class="reveal slide has-vertical-slides ready" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.475714);">
+					<section class="stack present" data-id="20f9fd62509648ad70d27623fdf85bab" style="display: block;"><section data-id="1cd093b3522091cac7a8ec40226b2668" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 358px; height: auto;" data-block-id="3d8a9842d865239768c0867f75d15ff0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Intro to JavaScript</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="db29ff6abac982d22c0955952b30f915" style="min-width: 4px; min-height: 4px; width: 613px; height: 230px; left: 174px; top: 106px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="800" data-natural-height="300" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_014.png"></div></div></section><section data-id="56e4d98ae6fe578d9c3342e1804f1bdb" class="future" aria-hidden="true" style="display: block;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 189px;" data-block-id="c3a2a85f94064849625743c88600df2c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p>In today's lesson, we will be learning about JavaScript and it's use in today's programming world.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9896a76e516ce52bf63e3f5c0309e227" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 180%;">
+<p>Lesson Overview</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3646310d76de6de55776836cc1b401c6" style="min-width: 4px; min-height: 4px; width: 205px; height: 205px; left: 80px; top: 318px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="450" data-natural-height="450" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_020.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="615c51ab672e0f2dbf5f531c73394d78" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 316px; top: 335px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="color:rgb(17, 17, 17)">The objectives for today's lesson are:</p>
+
+<ul style="color:rgb(17, 17, 17)">
+	<li>What is JavaScript?</li>
+	<li>Where to use JavaScript?</li>
+	<li>When to use JavaScript?</li>
+</ul>
+</div></div></section><section data-id="39c018bd3b29da70ffaabc04c2a0b773" class="future" aria-hidden="true" style="display: block;" hidden=""><div class="sl-block" data-block-type="text" data-block-id="8f51074eef4b9ad1f456a15f8b2dec66" style="height: auto; min-width: 30px; min-height: 30px; width: 924px; left: 18px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span class="seoSummary" style="color:rgb(51, 51, 51); text-align:start"><strong>JavaScript</strong>&nbsp;(<strong>JS</strong>) is a programming language that is lightweight and interpreted &nbsp;by a just-in-time compiler.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1f00e19375d113101742da3e44d959a0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 132px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 200%;">
+<p>What is Javascript?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 434px;" data-block-id="f327c37ec48e4dd496496f64b8108f02"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>You may be asking so what does these terms mean? So, Let's take them one at a time.</p>
+</div></div></section><section data-id="56e28f2411e64f83bcc6784becee05fa" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" data-block-id="ffa653fb4b6449875df37d589cb9c6b5" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 225px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>An <strong><em>interpreted language</em></strong>&nbsp; is a language
+ for which most of its implementations executes instructions directly 
+and freely, without previously compiling a program into machine code. 
+The opposite of this would be compiled languages which we'll touch on 
+later.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 95px;" data-block-id="d06d3bfd9f6775c53541af81d60927b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 200%;">
+<p>Interpreted Language</p>
+</div></div></section><section data-id="4fe8fa98d85e496272e9e011d633e147" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 792px; left: 84px; top: 303px;" data-block-id="b6c916b5b3ca91580febdcb0422c4223"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>A <strong><em>lightweight</em></strong> programming language is 
+defined as one that is designed to have a very small memory footprint, 
+is easy to implement and/or has minimalist syntax and features</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 132px;" data-block-id="1ad165136983ab293f699a7229e86c82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 200%;">
+<p>Lightweight</p>
+</div></div></section><section data-id="9e89dbe0e3ac4ebdaaa51951237d7312" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 802px; left: 80px; top: 130px;" data-block-id="e19aa4528c4e35273606a8528d5a8690"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>JavaScript is an interpreted languages so it uses a Just-In-Time 
+(JIT) compiler to convert source code to machine code at execution time.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 181px; top: 31px;" data-block-id="8e6f2be1c942fb25ff88911c9f0a5fec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 200%;">
+<p>Just-In-Time Compiler</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="075cc90d2e4bd7096d2b8971e0a97809" style="min-width: 4px; min-height: 4px; width: 760px; height: 317px; left: 101px; top: 280px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="760" data-natural-height="317" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_005.png"></div></div></section><section data-id="9e16857b8fb1b855d6023472b3cb77d1" class="future" aria-hidden="true" style="display: none;" hidden="">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 696px; left: 134px; top: 31px;" data-block-id="1aa9a04b2ba0af301169553802390fe1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 200%;">
+<p>Just-In-Time Compilation</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 747px; left: 107px; top: 140px;" data-block-id="1974e7a141278164dd4f29a35e4af9c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>JIT compilation is done by the JavaScript engine. It takes the code 
+that you have written and turns it into something that your native 
+browser understands.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 480px; height: 270px; left: 242px; top: 304px; min-width: 4px; min-height: 4px;" data-block-id="ee75ed3317ad6b1f9fb5a1f9d42a7551"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2400" data-natural-height="1350" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_019.png"></div></div></section><section data-id="9ee2fbfa66df6f1b69f377a25bea08cb" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 241px;" data-block-id="02efea8f0069cbeee50996b0aa75ff2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Compiled languages are compiled directly into machine code. Unlike 
+interpreters, compiled code executes faster than interpreted languages 
+by eliminating the overhead associated with interpreting code. It's 
+already in a language that the native machine understands.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ca323699655a017d0ee8f469fd9e104a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 80px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 210%;">
+<p>Compiled Languages</p>
+</div></div></section><section data-id="00a3423956dc5dcc31dc538961ebef4f" class="future" aria-hidden="true" style="display: none;" hidden="">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 728px; left: 116px; top: 42px;" data-block-id="e2d2ff7cb021e15e2a7d62ea2e848dfd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Compile Vs interpreted</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="a02e9f75b6430caf038edaa14a7bc959" style="min-width: 4px; min-height: 4px; width: 604px; height: 453px; left: 178px; top: 140px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="604" data-natural-height="453" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_004.png"></div></div></section><section data-id="f6dd6617b662a75eef6f8b103f8ffec6" class="future" aria-hidden="true" style="display: none;" hidden="">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 178px; top: 129px;" data-block-id="b962f7901e6f13bcbd9dde86e27d9835"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 170%;">
+<p>Pros &amp; Cons</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 604px; height: 335px; left: 178px; top: 225px; min-width: 4px; min-height: 4px;" data-block-id="b900f7a0f9815e688d8c04006e23bf82"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="604" data-natural-height="335" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_015.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 728px; left: 116px; top: 42px;" data-block-id="d6699539f82292770dc0e90126a5d913"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 210%;">
+<p>Compile Vs Interpreted</p>
+</div></div></section><section data-id="32a9ddcdb69564447ca4c65321d65ece" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 273px;" data-block-id="51c0f436c8cbfecd455404a1f5597a62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>While many languages are compiled into native machine code yet some 
+are interpreted. Some languages like Java uses combination of these 
+methods. Java is first compiled into what's known as JVM bytecode. This 
+bytecode is then interpreted by the Java Virtual Machine (JVM) at 
+runtime to native machine code. This process allows Java to run on 
+different platforms such as windows, linux and macs.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 868px; left: 46px; top: 111px;" data-block-id="772bc0c24a9067095bfe5a286b7bbfc3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Java: Compiled and Interpreted</p>
+</div></div></section><section data-id="9707933fe3b3f60476e5c1f1e6cc4c69" class="future" aria-hidden="true" style="display: none;" hidden="">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 868px; left: 46px; top: 82px;" data-block-id="6e68845b0fd0f4362d7f1b5f57fd071c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Java: Compiled and Interpreted</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="36ddb1720e88eb33dd2bd101948fb3e9" style="min-width: 4px; min-height: 4px; width: 806px; height: 375px; left: 77px; top: 210px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1024" data-natural-height="476" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard.png"></div></div></section><section data-id="f9da82947c334934f011416ac3fd65f8" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 832px; left: 64px; top: 70px;" data-block-id="ca0dd610e989aa8b250fcaa0a56b28e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 170%;">
+<p>What are the features of &nbsp;Javascript?</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="274a5610b21730c4c81553cfaf5e665f" style="min-width: 4px; min-height: 4px; width: 619px; height: 421px; left: 171px; top: 162px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="620" data-natural-height="422" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_013.png"></div></div></section><section data-id="0cb75024799b724bade4e2634acaec62" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 280px;" data-block-id="c881a1761aee6b7eb387fb2fff71141b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>The Javascript language also supports imperative, object-oriented and declarative (e.g. functional) programming styles.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="17ba0db738bc16965eb5893fc989e986" style="height: auto; min-width: 30px; min-height: 30px; width: 732px; left: 114px; top: 144px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 170%;">
+<p>JavaScript's Programming Styles</p>
+</div></div></section><section data-id="8e5ae4aa5e8f8bbca74ab85236068a6e" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 924px; left: 18px; top: 241px;" data-block-id="2aa2bc6fd32b379223a665b4b906fd62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Let's look at these programming styles individually.</p>
+
+<ul>
+	<li>Object-Oriented</li>
+	<li>Imperative</li>
+	<li>Declarative</li>
+</ul>
+</div></div></section><section data-id="936bd3c15429f896adfd18d78fb3a22f" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" data-block-id="de2d1d359eab1d377a96816af7bbdaf5" style="height: auto; min-width: 30px; min-height: 30px; width: 928px; left: 16px; top: 110.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Object-Oriented Programming</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7c32e644fb9e59ae1a86daa25ddc0004" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 233px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Object oriented programming (OOP) is a programming paradigm based on 
+the concept of "objects", which can contain data, in the form of fields,
+ and code, in the form of procedures or methods. In applications, these 
+objects interact with one another to meet the requirements of the 
+applications being built. In OOP, these objects are often referred to as
+ classes.</p>
+</div></div></section><section data-id="118900ba9b43e1e69b5f238e93c4e1c6" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 928px; left: 16px; top: 46px;" data-block-id="ffccca92088ce36a5a06f39fa059347f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Object-Oriented Programming</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="20c83b816b16d2b8bf551f938788962f" style="min-width: 4px; min-height: 4px; width: 435px; height: 304px; left: 262px; top: 156px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1200" data-natural-height="839" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_010.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d54cff9fafa0c05439f72f1730cf87ad" style="height: auto; min-width: 30px; min-height: 30px; width: 794px; left: 82px; top: 489px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>In object oriented programming, you would abstract the concept of a 
+car into a class or object. Each object having it's own set of features 
+or attributes.</p>
+</div></div></section><section data-id="6515cd89bd194dec820cca066a5b4ce4" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 81px; top: 59px;" data-block-id="cd34d63b260f730372efec2efd81f9b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Imperative Programming</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 820px; left: 62px; top: 182px;" data-block-id="a67cd4ad2d1f8805816c3f17446fe1e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In computer science, <strong><em>imperative programming</em></strong> is a programming paradigm in which step by step instructions are given to a computer to solve a specific problem.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="63d7b56bfe3995d218a6de374264bb4e" style="min-width: 4px; min-height: 4px; width: 377px; height: 212px; left: 62px; top: 348px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="500" data-natural-height="281" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/giphy_003.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a9d84cdcb0c81de7e67e0a2ec072d8f1" style="height: auto; min-width: 30px; min-height: 30px; width: 426px; left: 472px; top: 357px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="color:rgb(17, 17, 17)">The focus of imperative programming is on the <em>how the problem is to be solved</em>. The written code serves as a step-by-step guide to do so.</span></p>
+</div></div></section><section data-id="95f1e8f4715c888801e71b7e140e5c11" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 82px; top: 37px;" data-block-id="e107ec4e6ecd4dc39b10904794b95631"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Declarative Programming</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 82px; top: 163px;" data-block-id="4d93bd675821e4e004bce3e74c62b725"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In computer science, declarative programming is a programming 
+paradigm in which the focus is to build the logic of software without 
+describing it's flow.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="80ecbe67837eda26749eb9f9531df63f" style="height: auto; min-width: 30px; min-height: 30px; width: 423px; left: 421px; top: 379px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(17, 17, 17)">For example,&nbsp; in HTML you use &lt;img src="/big-teddybear.jpg&gt; to display an image and you don't care how it does this.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="89165d5f686bd0a6a784990b74cdeeba" style="min-width: 4px; min-height: 4px; width: 216px; height: 267px; left: 160px; top: 323px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="396" data-natural-height="490" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_003.png"></div></div></section><section data-id="c8d10e24108f507874e1e8119622ab54" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 82px; top: 37px;" data-block-id="30e4ecdf1c39dcae1773373b64384bbc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Imperative Vs Declarative</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="38b01b016253eaff89b2355b4e9efd5e" style="min-width: 4px; min-height: 4px; width: 806px; height: 417px; left: 77px; top: 162px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1321" data-natural-height="992" style="left: 0px; top: -114px; width: 806px; height: 605px;" data-crop-x="0" data-crop-y="0.18843" data-crop-width="1" data-crop-height="0.689256" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_002.png"></div></div></section><section data-id="5857c6e621a0eb249970bbdbc38369fa" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 80px; top: 140px;" data-block-id="ccb6e7a4c6cc0177678b934e4e4a3886"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Where to use JavaScript?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 253px;" data-block-id="6b565317d0ddd553b978a30b2ffc569a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In it's early days, JavaScript was mainly used in browsers. Because 
+web pages are static and stateless, JavaScript was used by the browser 
+in order to change the state of simple web pages. The interactions 
+between users and web pages could be enhanced with the use of JavaScript
+ to enable simple things like storing and retrieving data or responding 
+to events that occur in the browser.</p>
+</div></div></section><section data-id="dd5bf9fb80e2ab5915117bcd0cce902a" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 81px; top: 100px;" data-block-id="938499501cf3c612294c7e1305a6a483"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>Where to use JavaScript?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 81px; top: 210px;" data-block-id="0b0906bce4720b819243ce17aca5d11c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Today, JavaScript can be found not only in the browser by also on 
+mobile devices,&nbsp; desktop, IoT devices, in games and on backend 
+servers and more.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3d6e4b4a13e795e20052adfc75763068" style="min-width: 4px; min-height: 4px; width: 263px; height: 263px; left: 349px; top: 367px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="500" data-natural-height="500" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/giphy.gif"></div></div></section><section data-id="6ab701eaa00ab7169dc1d5d8f05751ef" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 245px;" data-block-id="b1051c685e46997551a4a24567896ee5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Let's explore a few of the places mentioned on the previous slide where JavaScript is used.</p>
+
+<ul>
+	<li>Web Browser</li>
+	<li>Desktop</li>
+	<li>Web Server</li>
+</ul>
+</div></div></section><section data-id="2bf489a12646f8ec3890dcf26bb7332c" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 71px; top: 253px;" data-block-id="79693259ef7f96c0c0cffc131c52556e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>A web browser is actually a computer program. A program that allows 
+you to view web pages and follow hyperlinks from one page to another or 
+one site to another for that matter. Some prominent browsers that you 
+may be familiar with is Google's Chrome, Microsoft's Internet Explorer 
+and Apple's Safari.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0abcb209ab1afaf663580a8ca5131079" style="height: auto; min-width: 30px; min-height: 30px; width: 856px; left: 52px; top: 110.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 210%;">
+<p>JavaScript in the Web Browser</p>
+</div></div></section><section data-id="b10f9d55f175179dec2cdf0b583e84e0" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 71px; top: 253px;" data-block-id="3478d5996f874a53862044875b4f4131"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Web browsers are designed to display content formatted with a 
+language called HyperText Markup Language or HTML for short. It was 
+invented in the 1990s as one of several ways to embed simple logic for 
+data verification and interactivity in web pages. Javascript today is 
+widely used to support this interactivity.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 872px; left: 44px; top: 110.5px;" data-block-id="47fdd4216da0fedaa560d9ecc09e179c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>JavaScript in the Web Browser</p>
+</div></div></section><section data-id="ffef5f09bde0483dcf9deab388f3d583" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 876px; left: 42px; top: 188px;" data-block-id="c2fab83d817a1c6c2127521c546084a3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; transition-delay: 0.6s; transition-duration: 0.6s;" data-animation-type="fade-in">
+<p>When using JavaScript with web browsers, normally the JavaScript 
+would be included as a separate file. Browsers have come a long way and 
+now support builtin debugging tools for developers. One such tool is the
+ console which we'll be using shortly.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 858px; left: 51px; top: 70px;" data-block-id="e76bc942a1457d14a69ae42b9fb1b214"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 210%;">
+<p>JavaScript in the Web Browser</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9be9cadf823eef5733f2f500e6817f01" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 20px; top: 375px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 14s;" data-animation-type="fade-in" data-animation-trigger-id="c2fab83d817a1c6c2127521c546084a3">
+<p><span style="color:rgb(17, 17, 17)">Programmers use the console to debug code when debugging JavaScript in web pages. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="286e6c976ce063ffa68f972deab69aa0" style="min-width: 4px; min-height: 4px; width: 300px; height: 218px; left: 640px; top: 363px;"><div class="sl-block-content" style="z-index: 14; transition-duration: 0.6s; transition-delay: 24s;" data-animation-type="fade-in"><img data-natural-width="300" data-natural-height="218" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_006.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 20px; top: 482px;" data-block-id="7050428718dc308f38ed3fd7e05f1eb4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; transition-duration: 0.6s; transition-delay: 14s;" data-animation-type="fade-in" data-animation-trigger-id="c2fab83d817a1c6c2127521c546084a3">
+<p><span style="color:rgb(17, 17, 17)">Otherwise, you save your file and refresh </span><span style="color:rgb(17, 17, 17)">over and over again until you get it right. </span></p>
+</div></div></section><section data-id="fa770c35e05e8d9726282c734c98e231" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 76px; top: 181px;" data-block-id="985fa877244094547c9a4c46ccb39b3e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>So let's have a demonstration of exactly what we're talking about.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 185px; top: 70px;" data-block-id="6ca57f95470e0598d551bcddc41a1a1b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Bringing up the Console</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 85px; top: 278px;" data-block-id="f480ce4ee759c8a3df7e75463635128a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p>To begin, open your Google Chrome browser. In the URL location of the bar enter the following:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 30px; left: 85px; top: 384px;" data-block-id="c79207d7489b7e9aad905aa8bb27215a"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre><code data-line-numbers="" class="hljs applescript"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">about</span>:blank</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 85px; top: 444px;" data-block-id="7d1d70585ba0a3f1eee57dc12df2d3d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" dir="ui">
+<p>This should result in a blank page to showing. If not, try the following which should have the same effect:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 30px; left: 76px; top: 530px;" data-block-id="061b125fc91ff121a007745ac7761ac9"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 16;"><pre><code data-line-numbers="" class="hljs xl"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">data</span>:<span class="hljs-keyword">text</span>/html,</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="6b1d6bb3eee681ca70626c35380b284d" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 134px;" data-block-id="3638b6fb72d528b75a098e82dafc3e4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p>At this point, we want to open the console in Google Chrome by going to:</p>
+
+<p>View &gt; Developer &gt; JavaScript Console</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 185px; top: 39px;" data-block-id="36abb4b22303039523024105b07f185f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 180%;">
+<p>Bringing up the Console</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="aa5d2567d55aa4f17ce113d5ab934411" style="min-width: 4px; min-height: 4px; width: 576px; height: 439px; left: 384px; top: 240px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="786" data-natural-height="599" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_011.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0c566321638d5ed134e88a74ac83def4" style="height: auto; min-width: 30px; min-height: 30px; width: 389px; left: 11px; top: 412px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>After doing so you should see the console pop-up</p>
+</div></div></section><section data-id="1d8d788856aead6aaa867bd42be80212" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 134px;" data-block-id="be4e3b3aa5baddb3d3b3e0b26f6bf8c0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>As mentioned previously, when developing code we're actually telling 
+the computer what to do. So now, let's tell the computer to solve an 
+arithmetic problem. Enter the following into the console and hit enter:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 185px; top: 39px;" data-block-id="73e536884df7f712dd43582c9c9f70dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Bringing up the Console</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="119fd4a7276f9a544a0189c10ac2e648" style="min-width: 30px; min-height: 30px; width: 906px; height: 30px; left: 27px; top: 290px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre><code data-line-numbers="" class="hljs basic"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-symbol">3 </span>+ <span class="hljs-number">5</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fc16008662989f848f9de65515db6498" style="height: auto; min-width: 30px; min-height: 30px; width: 906px; left: 27px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The console will respond with the result which is: 8</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 906px; left: 27px; top: 377px;" data-block-id="b2f4b038b7a7df23623cbe65e2584607"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Let's try a couple other computational exercises:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 906px; height: 30px; left: 27px; top: 439px;" data-block-id="71f76293f64e6f70ddb915a95ee77afc"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 16;"><pre><code data-line-numbers="" class="hljs basic"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-symbol">3 </span>+ <span class="hljs-number">5</span> * <span class="hljs-number">6</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 906px; height: 30px; left: 27px; top: 491px;" data-block-id="9dd81085e7e6614988aa9cd5f1f2cc98"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 17;"><pre><code data-line-numbers="" class="hljs lsl"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">(<span class="hljs-number">3</span> + <span class="hljs-number">5</span>) * <span class="hljs-number">6</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 906px; left: 27px; top: 537px;" data-block-id="9d89e61a1dfa8ec7d9c22762b10a991a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<p>You can write these expressions with or without spaces but usually it's considered better style to include the spaces.</p>
+</div></div></section><section data-id="4b54d75b5499aecd92b41bcc735146fa" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 126px;" data-block-id="587622a45ee387448c7053f4f6640606"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>Besides arithmetic, JavaScript also includes helpful functions. The 
+alert() function is one of these functions. Try typing the following 
+into the console and hit enter:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 185px; top: 39px;" data-block-id="e0a664ec947db25122f65c070ede4468"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Bringing up the Console</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 906px; height: 30px; left: 27px; top: 250px;" data-block-id="3b60c31e84fe66a8d5a5519afa5fc473"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre><code data-line-numbers="" class="hljs less"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-selector-tag">alert</span>(<span class="hljs-string">"Hello, World"</span>);</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 296px;" data-block-id="6062e1217d75b8bf5474839a21b97955"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" dir="ui">
+<p>This should result in a modal that pops up with an "OK" button. Click the button to close the modal.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 32px; top: 392px;" data-block-id="feee20a3d9ee555c9ce6b3102390f875"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" dir="ui">
+<p>In programming, the text we include in the parenthesis is called a 
+string. The quotes enclosing the text is required. We can also do this 
+with the arithmetic expressions that we performed earlier. Enter the 
+following and hit enter to see this in action:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 906px; height: 30px; left: 27px; top: 570px;" data-block-id="053e68bcdbc996430cae79d8126dcdac"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 16;"><pre><code data-line-numbers="" class="hljs lsl"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">alert(<span class="hljs-number">6</span> * <span class="hljs-number">9</span>);</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="015c5d9ea65465425ace36b2bd3c8187" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 337px;" data-block-id="052b472adac2e6c41d3d2b4875ab1370"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>This was just a simple demonstration showing how you can use 
+JavaScript in the browser. Using the console as mentioned before, 
+however, is usually done only when debugging code. For our purposes, 
+however, it provides a nice sandbox to try out code.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 185px; top: 210px;" data-block-id="4a898e7ec0461a8e70ced9077471c43a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Bringing up the Console</p>
+</div></div></section><section data-id="505986f1d1dae5d8f4aa783bca780417" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 140px;" data-block-id="53db7c6d66963baba348376ea631f48d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>JavaScript can also be used to build desktop applications. However, 
+since we're focused in this course on web development, we'll leave this 
+for you to explore on your own. In the meantime, here's some examples of
+ desktop applications built using JavaScript:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 674px; left: 143px; top: 35px;" data-block-id="842642c8bcd6d0791d06ce3bccb10790"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>JavaScript on the Desktop</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="9817b9c169e9771dfb5021e315adc237" style="min-width: 4px; min-height: 4px; width: 430px; height: 269px; left: 37px; top: 333px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1440" data-natural-height="900" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_008.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="f8e44db1fff233cad039eabfb0459ad8" style="min-width: 4px; min-height: 4px; width: 379px; height: 269px; left: 546px; top: 333px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1012" data-natural-height="506" style="left: -159px; top: 0px; width: 538px; height: 269px;" data-crop-x="0.295539" data-crop-y="0" data-crop-width="0.704461" data-crop-height="1" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_018.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f7632921f5cbd23fe9b2b57289d20ac1" style="height: auto; min-width: 30px; min-height: 30px; width: 282px; left: 609px; top: 602px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>VSCode</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 282px; left: 111px; top: 602px;" data-block-id="297a1b46190a418db0e1e1775e61207c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>Atom</p>
+</div></div></section><section data-id="633261884d86e1cf8620e8043be5b93e" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 146px;" data-block-id="cb6b60b0c9cd37cf128ec3aa2331a127"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p>In addition to its use in the web browser and on the desktop, in 
+recent years, JavaScript has also moved to the backend web server which 
+was once reserved for languages like Java, .Net, Ruby and others. One of
+ the more popular runtime envinronments used in this area is called 
+Node.js. A framework that takes advantage of Node.js to make backend 
+development easier is called Express.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 41px;" data-block-id="519b1c8c752338e161f18fab353faebc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 180%;">
+<p>JavaScript on the Web Server</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 384px; height: 235px; left: 496px; top: 402px; min-width: 4px; min-height: 4px;" data-block-id="995bd9958f8911deb1770f3d07590271"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1200" data-natural-height="734" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_021.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="445f08e23536b9746203a247f81b68b4" style="min-width: 4px; min-height: 4px; width: 389px; height: 129px; left: 46px; top: 437px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="389" data-natural-height="129" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_007.png"></div></div></section><section data-id="8e1ffc7bb668a657dd7b141345bfc4d3" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 175px;" data-block-id="70da807fe0072fedf2dcd40edc9f59b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p>The use of JavaScript in a web page depends on a number of factors 
+but for the most part, JavaScript should be used when the use of a site 
+moves beyond just submitting a form. If doing more than that, the use of
+ JavaScript is imperative since JavaScript provides the means for 
+interacting when performing the following:</p>
+
+<ul>
+	<li>Form Validation</li>
+	<li>Responding to Events</li>
+	<li>Creating Applications</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 624px; left: 168px; top: 70px;" data-block-id="88a9112b447240f86c2c2d86fe013bd9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>When to use JavaScript?</p>
+</div></div></section><section data-id="37d928428b9f44e729840b61bd0dc945" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 774px; left: 93px; top: 194px;" data-block-id="286b5d812510c75f054f865d54f9f30e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p><span style="text-align:left">We can actually go without the use of 
+JavaScript if we are building a site whose only purpose is to display 
+information. However, if we're building a site that moves beyond that 
+and needs a bit of magic we use JavaScript!</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 97px;" data-block-id="4dee5c0c245ccb1db8fa93e5acb2b2f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 180%;">
+<p>Form Validation</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="43bdca5effe238fe40c4bac841a4f544" style="min-width: 4px; min-height: 4px; width: 220px; height: 165px; left: 370px; top: 385px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="220" data-natural-height="165" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_012.png"></div></div></section><section data-id="3e2ac9bf89f540a8f63083c404daf8a5" class="future" aria-hidden="true" style="display: none;" hidden="">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 57px;" data-block-id="b845c9b6eac5c12ddaa8a895e1200c24"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 180%;">
+<p>Form Validation</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 163px;" data-block-id="6e80614a66e1ecdc479ada16e2c887c2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p><span style="text-align:left">Web pages that include forms often use 
+JavaScript to validate the information entered into the form. Why? Well,
+ when you enter information into a form, it's usually being used 
+elsewhere and we use JavaScript to ensure that the information entered 
+is valid.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a01f985ec37c3279712a1cb29402d860" style="height: auto; min-width: 30px; min-height: 30px; width: 486px; left: 447px; top: 414px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="color:rgb(17, 17, 17); text-align:left">For example, we can use JavaScript to ensure that a user enters and confirms passwords in a form.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 390px; height: 230px; left: 33px; top: 358px;" data-block-id="a779e7dd39873b5c8197c9651ed60153"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="487" data-natural-height="306" style="left: 0px; top: 0px; width: 390px; height: 245px;" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.938776" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_009.png"></div></div></section><section data-id="4392617226fea947c99f51ad2f11d845" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 70px;" data-block-id="1bebe222ff024b5f316459a1a3448176"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 180%;">
+<p>Form Validation</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="f3910957be65ebf50dadba5f3bf80112" style="min-width: 30px; min-height: 30px; width: 845px; height: 127px; left: 58px; top: 317px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre><code data-line-numbers="" class="hljs stylus"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">function emailIsValid (email) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-title">emailIsValid</span><span class="hljs-params">(<span class="hljs-string">'tyler@tyler@tylermcginnis.com'</span>)</span></span> <span class="hljs-comment">// false</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-title">emailIsValid</span><span class="hljs-params">(<span class="hljs-string">'tyler@tylermcginnis.com'</span>)</span></span> <span class="hljs-comment">// true</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="07856f89f48221d11fec684ead7decfe" style="height: auto; min-width: 30px; min-height: 30px; width: 846px; left: 57px; top: 169px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>The code below shows how you might pass an email from a form to a 
+function that validates whether the email address conforms to the known 
+format for emails:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 846px; left: 57px; top: 476px;" data-block-id="d7059b01daa4655db08bcfdca734e292"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>We will go into further details about what a function is in later 
+lessons. For now, however, feel free to copy and paste the code below to
+ see how it works.</p>
+</div></div></section><section data-id="7d3a6dc0c9eb3eac8e8a2c622cc40ef1" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 70px;" data-block-id="7cdccbfe442d18f264fbd00a7426698d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 180%;">
+<p>Responding to Events</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 846px; height: 30px; left: 57px; top: 357px;" data-block-id="f22540c603b5707f1dd852fbd5acf503"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre><code data-line-numbers="" class="hljs javascript"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">element.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{ alert(<span class="hljs-string">"Hello World!"</span>); });</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 846px; left: 57px; top: 169px;" data-block-id="b68be80ac721bb565efb1e8b96395563"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>One of JavaScript most powerful features is the ability to listen for
+ events that may happen on a web page. These events may include clicking
+ on a button, hitting the submit button on a form, detecting when the 
+page has loaded, etc.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 846px; left: 57px; top: 420px;" data-block-id="a5706561028bd4b1bc855d73b333cade"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>The code above is an example of a listener that when triggered by a 
+click event, it opens an alert box with the words, "Hello World!".</p>
+</div></div></section><section data-id="5ee17799bcee52907cf0924b9359beaf" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 90px;" data-block-id="05ed984160e171b8e586aa6958010eca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Creating Applications</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 846px; left: 57px; top: 199px;" data-block-id="7593f3659cd514977ac019293d5b6700"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Today, JavaScript is everywhere and one of the main uses for JavaScript today is to develop frontend applications. <span style="color:rgb(17, 17, 17)">A few of these frameworks are Vue, Angular and React. </span>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="7e2e433f66d582deb1476b9b257b53c9" style="min-width: 4px; min-height: 4px; width: 463px; height: 261px; left: 249px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="712" data-natural-height="401" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_016.png"></div></div></section><section data-id="e0317698da2aa4613aad16e491d1eac5" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 89px;" data-block-id="a9a50ba6647a0542e4cadfbc56e7c5a5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Creating Applications</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 846px; left: 57px; top: 192px;" data-block-id="d05bd752ceff6d4d6485c1d87df5c57c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In this course, we don't focus on these frameworks in particular but 
+depending on your career path, you may become very familiar with one or 
+move of the frameworks mentioned.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c045e61020425f33eda26836825e0ee8" style="min-width: 4px; min-height: 4px; width: 455px; height: 256px; left: 253px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="750" data-natural-height="422" style="" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/pasted-from-clipboard_017.png"></div></div></section><section data-id="dde3eb6d80627f4210fda819868a828f" class="future" aria-hidden="true" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="height: auto; width: 758px; left: 101px; top: 70px;" data-block-id="75e0f1d38514f8492ce314c236b492eb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 180%;">
+<p>Lesson Wrap-Up</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 846px; left: 57px; top: 185px;" data-block-id="ecd8cb06da19d4fcd9f2076e61f828e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In today's lesson, we covered what JavaScript is, how it's used and 
+where we can use it. In the following lessons we'll discover how we use 
+javascript to bring concepts to life!</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="72527ca2f7191928f67d43d890a44ddd" style="min-width: 4px; min-height: 4px; width: 480px; height: 269px; left: 232px; top: 356px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="269" data-lazy-loaded="" src="Intro%20to%20JavaScript_files/giphy_002.gif"></div></div></section></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background stack present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;" data-controls-layout="bottom-right" data-controls-back-arrows="faded"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">
+Intro to JavaScript
+
+</div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 197px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Intro to JavaScript</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 120px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Navigation instructions</h4>
+			<p class="pill-description">Press the space key or click the arrows to the right</p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+
+			<div class="deck-options">
+				<a class="fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/intro-to-javascript-1511/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+
+
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Intro to JavaScript</h1>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2019-07-30 16:30:23 UTC">17 days ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. </p>
+		<ul class="links">
+			 <li><a target="_blank" href="http://techtalentsouth.com/"><span class="icon i-link"></span>techtalentsouth.com</a></li> 
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+	<section class="deck-list">
+		<h2>More from <a href="https://techtalentsouth.slides.com/techtalentsouth">Tech Talent South</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/kids-code-html-1329"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6e3e0319952e0ca2d43ec1257b38bf52/thumb.jpg?1532543696)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Copy of Demo: HTML</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>619<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/2016-jax-summer-active-record-and-musicdb-1327"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6e3e0319952e0ca2d43ec1257b38bf52/thumb.jpg?1532543696)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Demo: HTML</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>519<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/program-your-alexa-1326"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6cc06c5d3c2542e0e0323c4008b245c7/thumb.jpg?1528405882)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Copy of Program your Alexa!</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>445<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/program-your-alexa"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6cc06c5d3c2542e0e0323c4008b245c7/thumb.jpg?1528405882)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Program your Alexa!</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>510<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="http://help.slides.com/">Help &amp; Support</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2019 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":5,"allow_scripts":false,"themes":[{"id":2251,"created_at":"2019-07-22T13:10:13.134Z","updated_at":"2019-07-22T14:58:25.859Z","name":"TTS Large","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/243b041f144a8ab4ca39ff3af30cb27e/thumb.jpg?1563807503","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":1440,"height":900},{"id":1853,"created_at":"2018-06-09T00:36:22.757Z","updated_at":"2018-06-09T01:18:32.427Z","name":"Levvel","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/ef87fb673a38dd8da678205742063ab8/thumb.jpg?1528507109","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2019-06-12T19:29:17.263Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1560367755","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"Lato","width":960,"height":700},{"id":1447,"created_at":"2017-03-13T00:03:40.135Z","updated_at":"2018-04-10T15:56:56.447Z","name":"Loyola","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/56c630deb6992e60252a34d556a5bbb7/thumb.jpg?1523375814","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},{"id":541,"created_at":"2015-04-15T18:49:54.356Z","updated_at":"2015-05-05T00:42:29.115Z","name":"Zach-TTS","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/d3c007/themes.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":null,"font_google":null,"width":960,"height":700},{"id":410,"created_at":"2015-01-25T21:08:11.722Z","updated_at":"2015-04-01T18:28:09.367Z","name":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/8275da/themes.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":null,"font_google":null,"width":960,"height":700},{"id":393,"created_at":"2015-01-12T17:23:52.794Z","updated_at":"2017-02-24T14:28:36.984Z","name":"Lesson-Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/6d87e076819b0ccdf38a166e436a95f7/thumb.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700}],"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":""},"deck":{"id":1568491,"slug":"intro-to-javascript-1511","title":"Intro to JavaScript","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/70fd17ed931e98243012f71eff13601b/thumb.jpg?1564857886","view_count":19,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":42,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1565015387086,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2019-06-12T19:29:17.263Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1560367755","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="Intro%20to%20JavaScript_files/application-51cb9ccb208d3a9e50bd27d2be31785755b56509075c39aeb.js" defer="defer"></script>
+    	<script src="Intro%20to%20JavaScript_files/deck-243d1f21275ef245a32e198dae7307162ef2b140f3261e01751aa164.js" defer="defer"></script>
+	
+
+
+  
+
+</body></html>

@@ -1,3 +1,3 @@
 ## Lab Activity 001
-*  EmojiBomb (Static WebSite - Single Page)
+*  EmojiBomb (Static Webite)
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage

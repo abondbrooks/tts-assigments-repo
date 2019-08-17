@@ -1,5 +1,5 @@
 ## Lab Activity 001
-*  EmojiBomb (Static Webite)
+*  EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 ## Lab Activity 002
 *  "Title: "

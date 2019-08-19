@@ -2,7 +2,7 @@
 *  EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 ## Lab Activity 002
-*  "RockPaperScissors Challenge"
+*  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 ## Lab Activity 003
 *  "Title: "

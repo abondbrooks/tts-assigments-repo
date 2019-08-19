@@ -4,8 +4,10 @@
 ## Lab Activity 002
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
-## Lab Activity 003
-*  "Title: "
+## Homework 003
+*  PieChart
+    - [Live Demo]() -  Exercise: 
+*  Navbar
     - [Live Demo]() -  Exercise: 
 ## Lab Activity 004
 *  "Title: "

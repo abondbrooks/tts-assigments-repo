@@ -6,7 +6,7 @@
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 ## Homework 003
 *  PieChart
-    - [Live Demo](https://piechart.netlify.com/) -  Exercise: 
+    - [Live Demo]() -  Exercise: Build a Pie Chart
 *  Navbar
     - [Live Demo]() -  Exercise: 
 ## Lab Activity 004

@@ -1,0 +1,54 @@
+.gameCanvas{
+  width: 50%;
+  height: 480px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.game{
+  margin-top:5%;
+  width:90%;
+  height:65%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius:15px;
+}
+
+
+
+.gameTitle{
+  font-size:15px;
+  width:auto;
+  text-align: center;
+  margin-top:-90px;
+  margin-left:-20px;
+}
+
+.scoreBoard{
+  margin:auto;
+  margin-top:-30px;
+  width:90%;
+  height:50px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius:15px;
+}
+.scoreBoardBlock{
+  margin-top:-18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius:5px;
+  width: 480px; 
+  height: 25px;
+}
+button{
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius:10px !important;
+  align-items: center;
+  margin-left:30px;
+  width:150px;
+  height:75px;
+}

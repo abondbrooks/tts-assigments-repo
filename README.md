@@ -6,5 +6,3 @@
 ## Homework 
 *  PieChart
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
-*  Navbar
-    - [Live Demo]() -  Exercise: 

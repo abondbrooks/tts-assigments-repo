@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-firefox has-visible-scrollbars gr__techtalentsouth_slides_com fonts-are-ready reveal-is-ready" data-account=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Java Introduction (Code Immersion) - HC</title>
+    <meta name="description" content="Let's learn the basics of Java, the world's most versatile language!">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Java Introduction (Code Immersion) - HC">
+    <meta property="og:description" content="Let's learn the basics of Java, the world's most versatile language!">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/05ca3bc010e8a4da9b5e2664ebe928ea/thumb.jpg?1565374226">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/java-introduction?token=Rgqu4N1v">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link href="Java%20Overview_files/css.css" rel="stylesheet" type="text/css" data-application-font="opensans">
+
+    <link rel="stylesheet" media="all" href="Java%20Overview_files/slides-2b712357092f86c1ae8835891d01f4694c873806772909994aae0.css">
+    <link rel="stylesheet" media="all" href="Java%20Overview_files/application-9fcd26d7c13113a4ea1d920b211ac9cee09f200031153fbe.css">
+    	<link rel="stylesheet" media="all" href="Java%20Overview_files/deck-v2-a333859a869636b15fcc330a6009c03deeb8f042543cfd557e69.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="2DRgumJxjbQ42keaI1zQoEx56fhWcu3g49gi9rcmSxNrtQgKGRz8YJolaE/4Nuw+9ZsTJCTv8YJW2OTrh5zV6w==">
+    <script type="application/javascript" async="" defer="defer" src="Java%20Overview_files/track.js"></script><script type="text/javascript" async="" src="Java%20Overview_files/f7sH7NavrjjvuGxByaw.js"></script><script async="" src="Java%20Overview_files/analytics.js"></script><script type="text/javascript">
+  if( !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    <!--[if lt IE 9]>
+    <script src="//assets.slid.es/assets/html5shiv-0bfa553ebc9c42abf66248f2f3feba0935da70b430bace410f80b72729c14820.js"></script>
+<![endif]-->
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Java Introduction (Code Immersion) - HC">
+	<meta name="twitter:description" content="Let's learn the basics of Java, the world's most versatile language!">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/05ca3bc010e8a4da9b5e2664ebe928ea/thumb.jpg?1565374226">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="Java%20Overview_files/css_002.css"><style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon-trigger{display:block;width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><script type="text/javascript" src="Java%20Overview_files/highlight-de2aa3b1c60901a5be52336f031352b88d7258d22505ebeeb29.js"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="Java%20Overview_files/zoom-db2ce8f5798992aca3c0ad9c22400bf562ea45c911b12d1dc7f36cbd.js"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body data-gr-c-s-loaded="true" style="transition: transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url('https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png')"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue">
+			<div class="reveal slide has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.477);">
+					<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg" data-id="cda958e5ba0a20e5fd571784e8b23b23" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 846px; left: 57px; top: 415px; height: auto;" data-block-id="503651ccf97e5a59fc321e59decfa2bb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Java: An Introduction</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 579px; height: 463px; left: 191px; top: 49px; min-width: 4px; min-height: 4px;" data-block-id="48b85e421d83005105cbded93a2d7906"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="Java%20Overview_files/newTTSLogo.png"></div></div></section><section data-id="7040913225c35aeb21cb0c8fa4182c94" aria-hidden="true" class="future" style="display: block;" hidden=""><div data-block-id="2344399cc7b692c9bb2b398924575875" class="sl-block" data-block-type="text" style="width: 410px; left: 275px; top: 25px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>What is Java?</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="b9d78ca9dc253ef12593c513fb3883fe" style="height: auto; min-width: 30px; min-height: 30px; width: 909px; left: 26px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="8d2b6c42-a4ca-469b-7f68-a813f3971c25" data-gramm="true" data-gramm_editor="true">
+<p><span class="md-expand" style="color:rgb(51, 51, 51); text-align:start">Java
+ is a programming language developed by Sun Microsystems in 1995 as a 
+core component of the Sun Microsystem Java Platform. It remains the most
+ widely used programming language due to its flexibility in when and 
+where it can be used. </span></p>
+
+<p>&nbsp;</p>
+
+<p><span class="md-expand" style="color:rgb(51, 51, 51); text-align:start">Java's slogan is </span><span style="color:rgb(51, 51, 51); text-align:start"><strong><span>"Write Once, Run Everywhere"</span></strong></span><span style="color:rgb(51, 51, 51); text-align:start">,
+ promising to provide the flexibility of developing and running Java 
+code on any device or platform. In November of 2006, Sun began releasing
+ Java's core code as free, open-source software. In 2009, Oracle 
+acquired Sun and now maintains the language.</span></p>
+</div></div></section><section data-id="39222657216a98a781270024955815a6" aria-hidden="true" class="future" style="display: block;" hidden=""><div class="sl-block" data-block-type="text" style="width: 619px; left: 171px; top: 175px; height: auto;" data-block-id="16b79fe0990950662db4611fe51387b2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;" data-gramm_id="593c41a4-37b8-ab32-cccb-3e6c92702673" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align: center;">Java V.S. JavaScript</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 723px; left: 119px; top: 249px;" data-block-id="99fca98ba773863d8549a1b5dbf7c944"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="c242cca9-fbdb-e038-0ac0-00e0b256e85a" data-gramm="true" data-gramm_editor="true">
+<h4 style="color:rgb(51, 51, 51); font-size:1.25em; text-align:start">&nbsp;</h4>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:1.2em"><span class="md-end-block md-focus md-line"><strong>Java</strong> and <strong>JavaScript</strong>, while sounding similar, are not the same or related. Sort of like <strong>ham</strong> and <strong>hamburger</strong>, <strong>park</strong> and <strong>parkway</strong>, <strong>can </strong>and <strong>canary</strong>… you get the idea!</span></span></p>
+</div></div></section><section data-id="524d33057c1758741b4e4d6d6c4705ea" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 540px; left: 210px; top: 81px; height: auto;" data-block-id="714b16aa751f24358b439edbb5c04fc6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 11;" data-gramm_id="c5bcf2c7-6bd5-8be4-9cac-555305cff165" data-gramm="true" data-gramm_editor="true">
+<h2>Benefits of Java</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="33f89303dcb028bed9687cbd1a4dd413" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 212px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;" data-gramm_id="f2a27d12-1193-6cdb-e343-42ab94d97cac" data-gramm="true" data-gramm_editor="true">
+<h3 style="color:rgb(51, 51, 51); font-size:1.5em; text-align:start"><span class="md-expand">Object Oriented</span></h3>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span class="md-end-block md-line"><span>In
+ Java, everything is considered an Object. This allows the code to be 
+easily extended with the use of classes and methods and allows you to 
+write less code to perform common tasks.</span></span></p>
+
+<p style="color:rgb(51, 51, 51); text-align:start">&nbsp;</p>
+
+<h3 style="color:rgb(51, 51, 51); font-size:1.5em; text-align:start"><span>Easy to learn (sort of...)</span></h3>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span class="md-end-block md-line"><span>While
+ Java is not the "easiest" to learn, it follows the concepts of Object 
+Oriented programming and is designed to be easy to learn and use, if you
+ have an understanding of OOP.</span></span></p>
+</div></div></section><section data-id="54b9400fbc85520565482b9a738388a6" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 896px; left: 32px; top: 9px; height: auto;" data-block-id="485eab79ebde5123010d473eec041701"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 10;" data-gramm_id="a8ebfe21-589c-5dc3-0ba0-244bd9e125c8" data-gramm="true" data-gramm_editor="true">
+<h2>Benefits of Java continued...</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 140px;" data-block-id="741bcfc38cdc9313b64a09fd1137f3c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 85%;" data-gramm_id="06234b93-bedd-adab-bb65-8dc7048f9b4c" data-gramm="true" data-gramm_editor="true">
+<h3 style="color:rgb(51, 51, 51); font-size:1.5em; text-align:start"><span>Architecture and Platform Independent</span></h3>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span class="md-end-block md-line"><span>Java
+ compiles into a platform-independent bytecode, which is distributed 
+over the web and interpreted by the Java Virtual Machine (JVM). It can 
+do this on any platform on which the JVM is running. This file is also 
+architecture-neutral, which makes it executable on many different 
+processors with the presence of the Java runtime system. Together, this 
+makes Java a very portable language.</span></span></p>
+
+<p style="color:rgb(51, 51, 51); text-align:start">&nbsp;</p>
+
+<h3 style="color:rgb(51, 51, 51); font-size:1.5em; text-align:start"><span>Multithreaded</span></h3>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span class="md-end-block md-line"><span>This
+ feature allows for the development of interactive applications that can
+ perform many tasks simultaneously, while still running smoothly.</span></span></p>
+</div></div></section><section data-id="f0c9bd408941bf253e4f8578cbd65fd0" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 237px;" data-block-id="1faa2b841f4b3cff3986fdda3a307bd5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;" data-gramm_id="21af3291-2b19-5ef3-ebcf-ed793f6fa337" data-gramm="true" data-gramm_editor="true">
+<p>While Java is a <strong>compiled</strong> programming language, it only compiles down to an intermediate binary form called <strong>JVM bytecode</strong>&nbsp;and is not yet executable machine code.</p>
+
+<p>The language compiler (<strong>javac</strong>) compiles the language into bytecode which is understood by the JVM.</p>
+
+<p>The bytecode is interpreted by the JVM and converted to native 
+machine code. This also makes Java a platform independent language.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="926368a030a2a31a045cffc9bcdcbdf9" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 113px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;" data-gramm_id="93b2db10-5adc-f2de-6cb9-4a1c1e6b3f4a" data-gramm="true" data-gramm_editor="true">
+<h3 style="color:rgb(51, 51, 51); font-size:1.5em"><span class="md-expand">Compiled... and Interpreted?</span></h3>
+
+<p>&nbsp;</p>
+</div></div></section><section data-id="60c3fd4b3d9fd5a2ab3efaefba93a61a" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="1fe3db4220c64ae29f003be2f5a772e8" class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 43px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Let's get started!</h2>
+</div></div>
+<div data-block-id="5ad3af1179a48fe8075bb49545d875d6" style="height: auto; min-width: 30px; min-height: 30px; width: 864px; left: 48px; top: 151px;" data-block-type="text" class="sl-block"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<p><span style="font-size:1.0em">Let's write our first program.&nbsp; We
+ will begin by checking to make sure we have Java loaded in our local 
+environment.&nbsp; In the command prompt/terminal, type the following:</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-block-id="abc16cd506a2f072f4de6a93b1a3bedc" style="min-width: 30px; min-height: 30px; width: 261px; height: 41px; left: 350px; top: 297px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13;"><pre class="ruby"><code class="hljs">java -version</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="041d5b94286017874d135b6dff81ab07" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 368px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>If you have Java installed, you should a return similar to this:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="ba127a7e277672ad70fc1838bbb614df" style="min-width: 30px; min-height: 30px; width: 720px; height: 80px; left: 119px; top: 480px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 15;"><pre class="ruby"><code class="hljs">java version <span class="hljs-string">"1.8.0_131"</span>
+Java(TM) SE Runtime Environment (build <span class="hljs-number">1.8</span>.<span class="hljs-number">0_131</span>-b11)
+Java HotSpot(TM) <span class="hljs-number">64</span>-Bit Server VM (build <span class="hljs-number">25.131</span>-b11, mixed mode)</code></pre></div></div></section><section data-id="f0e60b105c53cf66f995e6c7a51edbc0" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 36px; height: auto;" data-block-id="a0385bd7a206d4dfa6ab6ced8906441f"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 453px; left: 254px; top: 149px;" data-block-id="c5344f9ee04e7a29f08eb8b499997ffc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>Open IntelliJ and click on <strong><em>Create New Project</em></strong></p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 457px; height: 330px; left: 240px; top: 270px; min-width: 4px; min-height: 4px;" data-block-id="afd8f31917ebb5411902c426f04472ea"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1336" data-natural-height="964" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432798/pasted-from-clipboard.png"></div></div></section><section data-id="4537a8652a1c55759914d9abb9dedabf" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 36px; height: auto;" data-block-id="8f5673e5bb283631041bc98e70313122"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 709px; left: 126px; top: 168.5px;" data-block-id="cf9b9de5d2fd159147befe0b8de9b417"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>Once the New Project dialog opens keep all&nbsp; default setting and click <em><strong>Next</strong></em>.</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-block-id="adbcf75c90ed93e4aa36b3e0be993ef3" style="min-width: 4px; min-height: 4px; width: 481px; height: 300px; left: 240px; top: 280px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2160" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432814/pasted-from-clipboard.png"></div></div></section><section data-id="f97b2ac45fae86e054aee5dc6a243e9a" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 36px; height: auto;" data-block-id="e3243a7371538b3fe73fdb3eb379e1c0"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 709px; left: 126px; top: 168.5px;" data-block-id="cea915a1fd2e44575bab6f7c1531cb82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>Be sure to check <strong><em>Create project from template</em></strong>. This will automatically add the main method to your class.</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 532px; height: 333px; left: 214px; top: 289px;" data-block-id="09538054ab195fa6fd57577138d595fa"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="2160" data-natural-height="1350" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432819/pasted-from-clipboard.png"></div></div></section><section data-id="b440adc5222d225564afd673d086a0b7" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 36px; height: auto;" data-block-id="6e2dffcb2a70a9b269074e7f66774961"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-block-id="cec84b25b84305ba3ec5d6f994c89cc3" style="min-width: 4px; min-height: 4px; width: 382px; height: 243px; left: 289px; top: 412px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1622" data-natural-height="1034" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432835/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8e8254af055cf33ffced64ec9ba37280" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 132px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><strong>Enter project information:</strong></p>
+
+<p style="text-align:left">Project name: HelloWorld</p>
+
+<p style="text-align:left">Project location: ~/ideaProjects/HelloWorld</p>
+
+<p style="text-align:left">Base package: com.tts</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 331px;" data-block-id="606752239fa9cb38196e469c381b9263"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">After adding project information, click <em><strong>Finish</strong></em>.</p>
+</div></div></section><section data-id="d66f58da77cf79a68ebb1194b95e15eb" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 36px; height: auto;" data-block-id="38c10f4c72fd5306d5a707122aa70fa5"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 890px; left: 35px; top: 140px;" data-block-id="ff984a472f2cd981ed9faf2955e2c0b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>After clicking <strong><em>Finish</em></strong>, the project will be presented to you with the static main method. Below the comment add the following:</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 487px; height: 305px; left: 45px; top: 350px; min-width: 4px; min-height: 4px;" data-block-id="a3ef58894752a29b96a3273023f15ad4"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2160" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432857/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 545px; height: 232px; left: 368px; top: 444px; min-width: 4px; min-height: 4px;" data-block-id="42dd4bb1b172457fe661739ca6aa26c8"><div class="sl-block-content" style="z-index: 14;"><img style="left: -387px; top: -50px; width: 1488px; height: 931px;" data-natural-width="2160" data-natural-height="1350" data-lazy-loaded="" data-crop-x="0.259986" data-crop-y="0.054171" data-crop-width="0.366283" data-crop-height="0.249187" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432857/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="076f947a96346dcb242b4480c36a5e95" style="min-width: 30px; min-height: 30px; width: 359px; height: 33px; left: 301px; top: 247px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 15;"><pre class="ruby"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">System.out.print(<span class="hljs-string">"Hello, World"</span>);</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="a07616c18105e367fa569abae657124a" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 61px; height: auto;" data-block-id="4263ed5f07b9c1cab57ec0127b313b54"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 890px; left: 35px; top: 165px;" data-block-id="cab7ad807281defe297522d0cc1fba13"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>To run the project, click on the icon pictured below. It can be found in the top right of the IntelliJ IDE:</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-block-id="73821b2e97d5e2a1fa2fd3a378cecee9" style="min-width: 4px; min-height: 4px; width: 561px; height: 351px; left: 45px; top: 289px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="2160" data-natural-height="1350" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432877/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 379px; height: 219px; left: 501px; top: 318px;" data-block-id="1d496af83e5b94344fecdd91e60528c9"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="2160" data-natural-height="1350" style="left: -878px; top: 0px; width: 1257px; height: 784px;" data-crop-x="0.698553" data-crop-y="0" data-crop-width="0.301447" data-crop-height="0.279279" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432877/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="bd33523e0c67f91f481c0058bf827525" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 720px; top: 407px;"><div class="sl-block-content" data-line-x1="200" data-line-y1="65" data-line-x2="200" data-line-y2="0" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="65" viewBox="200 0 1 65"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="200" y1="65" x2="200" y2="8"></line><line stroke="#ff0000" stroke-width="10" x1="200" y1="65" x2="200" y2="8"></line><path style="fill: rgba(0,0,0,0);" stroke="#ff0000" stroke-width="10" transform="translate(200,8) rotate(0)" d="M 22.5 22.5 L 0 0 L -22.5 22.5"></path></svg></div></div></section><section data-id="7674b901420787e5f55650192b2eddd3" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 152px; height: auto;" data-block-id="3dfa18993859d38e028725e1a6716fa0"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="c4b2d8b7-84fa-ee90-c35f-2bafc715acf6" data-gramm="true" data-gramm_editor="true">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 890px; left: 35px; top: 256px;" data-block-id="c327f8dbe92257dca60dd5fde4c0c44c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="644877b7-532e-20aa-3aef-f8a2dbabef5d" data-gramm="true" data-gramm_editor="true">
+<p>This results in the following.</p>
+
+<p>Congrats you've written your first Java program!</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-block-id="a2ccc9a2d491782a194514cd9d07faef" style="min-width: 4px; min-height: 4px; width: 519px; height: 178px; left: 221px; top: 371px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="672" data-natural-height="230" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6432904/pasted-from-clipboard.png"></div></div></section><section data-id="41d395768d57c69a135c9fedadd80ba9" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 109px; height: auto;" data-block-id="663f8cd58b6bfb894e9709dde96bf592"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 193px;" data-block-id="58a011bddb5554120988109e8e1333d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Let's unpack this one line at a time:</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 906px; left: 27px; top: 358px;" data-block-id="f7a1e2865b2a217910285514a558838a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.0em"><span class="md-expand" style="color:rgb(51, 51, 51); text-align:left">While
+ classes will be used often in our programs, its appearance at the 
+beginning of our code is used to specify the name of our Java program, 
+in this case </span><span style="color:rgb(51, 51, 51); text-align:left"><strong><em>HelloWorld.java</em></strong>&nbsp;.
+ A Java program must have a public class name that matches the first 
+part of its filename exactly and is case-sensitive. If they don't match,
+ you will get an error when you try to compile it.</span></span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 66px; left: 230px; top: 265px;" data-block-id="265b79f1ec65879501494a183eeed7a1"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" data-code-frame="none" style="z-index: 14;"><pre class="ruby"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">...</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> {</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">...</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="69a7ba2c3ac337d090a05fc1701f5b5b" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 427px; height: 69px; left: 241px; top: 103px;" data-block-id="735174ad85ebdabdcf34b93e65f8ec45"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 11;"><pre class="java"><code class="hljs">...
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{ 
+...</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 71px; top: 294px;" data-block-id="8e414ae477dd41d20e95a4dc7c51fd73"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul style="color:rgb(51, 51, 51)">
+	<li style="color:rgb(51, 51, 51); text-align:left"><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>Public</strong>&nbsp;- means that this method will be accessible anywhere, by any Class. </span></span></li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>static</strong>
+ - means the given method or variable is not instance-related but Class 
+related. This method can be called directly using the class name without
+ creating an instance of it.</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>void</strong> - Is used to define the Return Type of the method. Void means the method will not return any value.</span></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="413b7e99f981ee04baf7c9d745cfd794" style="height: auto; min-width: 30px; min-height: 30px; width: 904px; left: 28px; top: 195px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="991a191c-2144-b4ed-87f3-ada50df39af1" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left"><span style="font-size:1.0em"><span class="md-expand" style="color:rgb(51, 51, 51); text-align:left">This line of code states the beginning of the main part of our program. The term "</span><span style="color:rgb(51, 51, 51); text-align:left"><strong>main"</strong>&nbsp;specifies the entry point to </span><em>most</em><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;Java programs.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 870px; left: 44px; top: 9px; height: auto;" data-block-id="6aa76337ac2ec7735343f5e0d2e70966"><div style="z-index: 14;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>"Hello World"</h2>
+</div></div></section><section data-id="dabfa72b7718e03ad25bd10fe34e78f3" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 311px;" data-block-id="e9d6b8426f9ec5cbafec2dc073de8ce6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul style="color:rgb(51, 51, 51)">
+	<li style="color:rgb(51, 51, 51); text-align:left"><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>main</strong> - this method name is searched by Java Virtual Machine (JVM) as a starting point for an application. Without the <strong>main</strong> block, the JVM will return an error.</span></span></li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>String args[]</strong> - the parameter to the main Method.</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-focus md-line"><strong>{ }</strong> - Surrounds code blocks such as loops, methods,​ and classes.</span></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 870px; left: 46px; top: 125px; height: auto;" data-block-id="73a6e9506ab62e197772a6ee8531739d"><div style="z-index: 12;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>"Hello World"</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 427px; height: 69px; left: 267px; top: 220px;" data-block-id="334fa4690b024b7d31cffc6f73865778"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13;"><pre class="java"><code class="hljs">...
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{ 
+...</code></pre></div></div></section><section data-id="81ba70f94c57115481ee3e6984702109" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 870px; left: 45px; top: 109px; height: auto;" data-block-id="0c613cff2ccaf61882a9c8b14b7dbf34"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>"Hello World"</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 360px; height: 68px; left: 300px; top: 221px;" data-block-id="2ea91d0c5e596120c9e99127fd57d08a"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 14;"><pre class="java"><code class="hljs">...
+System.out.print(<span class="hljs-string">"Hello, World"</span>);
+...</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3ff8802b8e3d30a9dcd6cd2e571a49f4" style="height: auto; min-width: 30px; min-height: 30px; width: 872px; left: 45px; top: 323px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="a52447ca-0016-bd58-031b-51b286d00ee4" data-gramm="true" data-gramm_editor="true">
+<p>Finally, we have our first command. Here we call the System class and reference its <strong>out</strong>&nbsp;field to use the method <strong>print</strong>. Then we will include our string, <span style="color:rgb(17, 17, 17)">&nbsp;"Hello, World!".</span></p>
+</div></div>
+</section><section data-id="f054816d0e1babcd33cf2a6f99aa78fb" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 18px; height: auto;" data-block-id="c43329249b3c28df0bee6c5e40b9e322"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Running the Program</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="fb303bd37270981bd0b145fb3d6a5a8b" style="height: auto; min-width: 30px; min-height: 30px; width: 884px; left: 38px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Awesome! Your result should say "Hello, World"<strong>.</strong>&nbsp;Let's add another line that says "Today is awesome!":</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="836e1b4c3006c44dc56d998dd51ed887" style="min-width: 30px; min-height: 30px; width: 665px; height: 198px; left: 148px; top: 251px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12;"><pre class="ruby"><code class="hljs">/<span class="hljs-regexp">/We'll exlude our import.lang.* command since its not really necessary
+
+
+    public class HelloWorld {
+        public static void main(String[] 
+	    System.out.print("Hello, World\n");
+            System.out.print("Today is awesome!\n");
+	}
+    }</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a1b0199471c4941272663050ead877b2" style="height: auto; min-width: 30px; min-height: 30px; width: 797px; left: 83px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Notice the addition of the <em>\n</em>. This is to force linebreaks</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 797px; left: 93px; top: 541px;" data-block-id="4cdf384d3031cb6c483cb39f59a6ad3a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>To see the results, run the program again!</p>
+</div></div></section><section data-id="f44b9ce594607db44d6b3dff089b08d9" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 18px; height: auto;" data-block-id="18cb8b02a65716df6f1c854f1e246689"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Variables</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="9640cbf65800b8a3549c348af8cecebf" style="height: auto; min-width: 30px; min-height: 30px; width: 779px; left: 92px; top: 114px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="fdd6c9e2-839f-94ef-bce9-f4d5ef611309" data-gramm="true" data-gramm_editor="true">
+<p><span class="md-expand" style="color:rgb(51, 51, 51); text-align:start">Every
+ programming language has a way of storing information. Variables are 
+the main way of remembering data as a program is running.</span><span class="md-expand" style="color:rgb(51, 51, 51); text-align:left">&nbsp;Variables
+ in Java store data of a particular data type, and that data type has to
+ be specified whenever you declare a variable.&nbsp; </span></p>
+
+<p>&nbsp;</p>
+
+<p><span class="md-expand" style="color:rgb(51, 51, 51); text-align:left">In Java, there are two different data types - <strong>Primitive</strong> and <strong>Reference</strong>.&nbsp; We'll go more into those later.&nbsp; For now, we are going to focus on the data type <em><strong>String</strong></em> which is a <em>Reference</em> data type.</span></p>
+
+<p>&nbsp;</p>
+
+<p><span class="md-expand" style="color:rgb(51, 51, 51); text-align:left">When a variable is contained within an object, it's called a <strong>field</strong>.</span></p>
+</div></div></section><section data-id="d365be7a18af48dadabbdee0a483a810" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 18px; height: auto;" data-block-id="8e8db46c4f5d7babe12300a9d352c112"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Variables</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="95e2708be16a606a83324f9b17ca363d" style="height: auto; min-width: 30px; min-height: 30px; width: 892px; left: 33px; top: 113px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:rgb(17, 17, 17)">Let's use a variable with a data type String to store data in our program. &nbsp;</span>We want our program to say&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="faed5d8085b92cedb37d6403097b3613" style="height: auto; min-width: 30px; min-height: 30px; width: 647px; left: 158px; top: 521px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(17, 17, 17)">First, we declare a data type, then we give it a name and assign the data type. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="546aabbe7d7b3014dac1c17783b9b953" style="min-width: 30px; min-height: 30px; width: 343px; height: 38px; left: 310px; top: 452px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 14;"><pre class="ruby"><code class="hljs">String firstName = <span class="hljs-string">"Zack"</span>;</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 343px; height: 38px; left: 309px; top: 210px;" data-block-id="3842ebe881c72ee7ab61031a424f7293"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 15;"><pre class="ruby"><code class="hljs">Hello, Zack! Goodbye, Zack!</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9c2b09779177247563e1735d04b60cbd" style="height: auto; min-width: 30px; min-height: 30px; width: 922px; left: 19px; top: 288px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="color:rgb(17, 17, 17)">We'll use a variable to store the name "Zack".</p>
+
+<p style="color:rgb(17, 17, 17)">In Java, you must specify a data type so that it knows how your program should store that information.&nbsp;</p>
+</div></div></section><section data-id="3ee2bd96e228bdb2a494d3d9369c72ba" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="16bf3ea23e0ab32395dffed335501c33"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Variables</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 892px; left: 35px; top: 453px;" data-block-id="44f80473142558ea1c59f46f5bc41546"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="dd487a61-a18c-7784-9c37-ccd89fd311dd" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(17, 17, 17)">The .<strong>printf</strong> 
+method helps with formatting the system output. It takes 2 or more 
+parameters. The first parameter is the format string. The additional 
+parameters are used to replace the format specifiers. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 938px; height: 154px; left: 12px; top: 257px;" data-block-id="2cfe33b84dd781bb459253308c180448"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 94%;"><pre class="java"><code class="hljs">    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+	    <span class="hljs-comment">//System.out.printf("Hello World!\n");</span>
+            <span class="hljs-comment">//System.out.printf("Today is awesome!\n");</span>
+            String firstName = <span class="hljs-string">"Zack"</span>;
+            System.out.printf(<span class="hljs-string">"Hello %s!\n"</span>, firstName); System.out.printf(<span class="hljs-string">"Goodbye %s!\n"</span>, firstName);
+	}
+    }</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="adaabf704b1e146b9940926ea14b76df" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 160px; top: 153px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Comment out the other lines of code in the method and add the following:</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="5abc6c878422a8d5131cd450a5315de8" style="min-width: 4px; min-height: 4px; width: 822px; height: 56px; left: 58px; top: 327px;"><div class="sl-block-style" style="z-index: 15;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 822 56"><defs><clipPath id="shape-mask-1-1531551802252"><rect width="822" height="56" rx="0" ry="0"></rect></clipPath></defs><rect width="822" height="56" rx="0" ry="0" clip-path="url(#shape-mask-1-1531551802252)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="6"></rect></svg></div></div></div></section><section data-id="b5673e7170ec461f07a23029e92a2de6" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="fed2268696b49c92cc53818991d1ad0e" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 110px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Receiving Input</h2>
+</div></div>
+<div data-block-id="c8bfee7984dd3495f1cd6e1f5432bc54" style="height: auto; min-width: 30px; min-height: 30px; width: 675px; left: 156px; top: 216px;" data-block-type="text" class="sl-block"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="a598ecca-4d0b-d18b-628f-bfb8e35f75fe" data-gramm="true" data-gramm_editor="true">
+<p>To take input, we can use what's called a <strong>Scanner</strong>. A Scanner is an object within Java that belongs to the <strong>util</strong>&nbsp;package. We'll need to import it!</p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-block-id="9c2cfdad0c3968abbb29afbf6b541cdc" style="min-width: 30px; min-height: 30px; width: 459px; height: 45px; left: 264px; top: 350px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 178%;"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1471ed9fb9262d1f21b9a0447f0ddd96" style="height: auto; min-width: 30px; min-height: 30px; width: 620px; left: 173px; top: 424px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="82a4ecd9-ad07-6cce-ec8e-23eca9013877" data-gramm="true" data-gramm_editor="true">
+<p>This will import the Scanner element from the util package. We could also import the entirety of the util package by calling <strong>java.util.*</strong> instead.</p>
+</div></div></section><section data-id="1b00f5907d14a8f7b53f52d5a2a0d442" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 67px; top: 18px; height: auto;" data-block-id="fb74c19825d26bed819f5aadbdb8fa23"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Receiving Input</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 925px; height: 225px; left: 18px; top: 185px;" data-block-id="d32932a0d521bb5407fd73989d96a21d"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 11; font-size: 94%;"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+            Scanner input = <span class="hljs-keyword">new</span> Scanner(System.in);
+	    <span class="hljs-comment">//System.out.printf("Hello World!\n");</span>
+            <span class="hljs-comment">//System.out.printf("Today is awesome!\n");</span>
+            System.out.println(<span class="hljs-string">"What is your name?"</span>);
+            String firstName = input.nextLine();
+            System.out.printf(<span class="hljs-string">"Hello %s!\n"</span>, firstName);
+            System.out.printf(<span class="hljs-string">"Goodbye %s!\n"</span>, firstName);
+
+	}
+}
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6f557a2037fe3f36263079d99a3956de" style="height: auto; min-width: 30px; min-height: 30px; width: 904px; left: 28px; top: 435px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="efad7ce4-8581-dbda-06f2-a1e1338b9f62" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(17, 17, 17)">This method presents a prompt: "What is your name?"&nbsp; The Scanner will read input from <strong>System.in</strong>, which is the computer's standard input. This means our keyboard!</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d2405790ad6bd1b576b0fb349dc52651" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 92px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Replace the code for our firstName variable to include the console.readLine() method.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 892px; height: 83px; left: 51px; top: 294px;" data-block-id="a83b579a411100ce1022e0c5318a8ea8"><div class="sl-block-style" style="z-index: 15;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 892 83"><defs><clipPath id="shape-mask-47-1531552367409"><rect width="892" height="83" rx="0" ry="0"></rect></clipPath></defs><rect width="892" height="83" rx="0" ry="0" clip-path="url(#shape-mask-47-1531552367409)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="6"></rect></svg></div></div></div></section><section data-id="8147fbce20ad12e3ed6ae98e1a6e1c26" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 48px; height: auto;" data-block-id="1de8a67fd3400c0a33c54c072369ed39"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Receiving Input</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 925px; height: 225px; left: 21px; top: 238px;" data-block-id="21eb9328d17a069fc2f04f5c9d4d25ad"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 11; font-size: 94%;"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+            Scanner userInput = <span class="hljs-keyword">new</span> Scanner(System.in);
+             System.out.println(<span class="hljs-string">"What is your first name?"</span>);
+             String firstName = userInput.nextLine();
+             System.out.println(<span class="hljs-string">"What is your last name?"</span>);
+             String lastName = userInput.nextLine();
+             System.out.printf(<span class="hljs-string">"Hello %s %s!\n"</span>, firstName, lastName);
+             System.out.printf(<span class="hljs-string">"Goodbye %s %s!\n"</span>, firstName, lastName);
+	}
+}
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 735px; left: 113px; top: 161px;" data-block-id="95e8511ca6f6ee3c5a66cf7c2ff17f93"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="a3596f01-baf9-ad74-0476-d1cff5ffbb37" data-gramm="true" data-gramm_editor="true">
+<p>We can also have more than one variable in our string.</p>
+</div></div>
+</section><section data-id="3d7c3cb74011914846daa11cb6c976c1" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 7px; height: auto;" data-block-id="253777af390a9321615e8dcc35b0e51c"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Challenge!</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="9045923d669de2fad3e273723a5fce5f" style="height: auto; min-width: 30px; min-height: 30px; width: 897px; left: 38px; top: 147px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="c1fd2ff7-aa5a-6338-c0b6-5ac93b4b0e7f" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(17, 17, 17)">Create a new project called MadLib using IntelliJ. Pull up a new project file and complete the following.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bc765f518f5a3f5450f0c37b8d3ce508" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 168px; top: 81px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3><span style="font-size:1.0em"><strong>Mad Lib</strong></span></h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 897px; left: 38px; top: 381px;" data-block-id="3905515b48c776244600c1ea14f238b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="c1fd2ff7-aa5a-6338-c0b6-5ac93b4b0e7f" data-gramm="true" data-gramm_editor="true">
+<p style="text-align: left;">Here is an example:</p>
+
+<p style="text-align:left">Dear <strong>name</strong>,</p>
+
+<p style="text-align:left">You are <strong>adverb</strong>&nbsp;<strong>adjective</strong> and I want to be your <strong>noun</strong>! I want to go to the <strong>nounTwo</strong> with you in <strong>number</strong> days. &nbsp;</p>
+
+<p style="text-align:left">Sincerely, <strong>yourName</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 897px; left: 38px; top: 260px;" data-block-id="777a7b007a18016e24eb4138587763ea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="c1fd2ff7-aa5a-6338-c0b6-5ac93b4b0e7f" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(17, 17, 17)"><strong>Use the variables below to compose the following paragraph:</strong></p>
+
+<p style="color:rgb(17, 17, 17)">name, adjective, verbOne, verbTwo, number, yourName</p>
+</div></div></section><section data-id="d8cabcf4f2a8817527e712f68ca1b20f" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 7px; height: auto;" data-block-id="69552e0dbda795363c0b11442e2817cd"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Challenge Solution</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 169px; top: 107px;" data-block-id="771a19dbb1c90229796ca64d8e7427c7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:1.0em"><strong>Mad Lib</strong></span></h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="bd40807aede70f7207897edf049b68a4" style="min-width: 30px; min-height: 30px; width: 916px; height: 443px; left: 24px; top: 168px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 94%;"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MadLib</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        
+          Scanner userInput = <span class="hljs-keyword">new</span> Scanner(System.in);
+          System.out.println(<span class="hljs-string">"Enter a name: "</span>);
+          String name = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me an adjective: "</span>);
+          String adjective = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a verb: "</span>);
+          String verbOne = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me another verb: "</span>);
+          String verbTwo = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a number: "</span>);
+          String number = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me your name: "</span>);
+          String yourName = userInput.nextLine();
+
+          System.out.printf(<span class="hljs-string">"Here is your story: \n"</span>);
+          System.out.printf(<span class="hljs-string">"\n Dear %s,"</span>, name);
+          System.out.printf(<span class="hljs-string">"\n You are extremely %s and I want to %s you!"</span>, adjective, verbOne);
+          System.out.printf(<span class="hljs-string">"\n I want to %s you %s times."</span>, verbTwo, number);
+          System.out.printf(<span class="hljs-string">"\n Sincerely, %s \n"</span>, yourName);
+
+          
+
+	}
+}</code></pre></div></div></section><section data-id="1969b645853c1d4f8832540210c51d99" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="d54dc2be14762fea9c1204d7949be2b7" style="height: auto; min-width: 30px; min-height: 30px; width: 865px; left: 48px; top: 15px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>MadLib Gone Right or Wrong?</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4e3641e01dcb23a02eee4899a180789f" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 128px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Our MadLib is so vague!</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d2abbed3659c9cd24bfae41ee2ce6c21" style="height: auto; min-width: 30px; min-height: 30px; width: 323px; left: 85px; top: 275px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>name:</strong> Joel&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>adjective:</strong>&nbsp;awesome</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>verbOne: </strong>hug</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>verbTwo: </strong>high-five</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>number: </strong>10</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>yourName:</strong>&nbsp;Zack</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 323px; left: 588px; top: 284px;" data-block-id="19bf38b0c142bdfe425aaca83c6d5fc4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>name:</strong> Mark</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>adjective:</strong>&nbsp;idiotic</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>verbOne: </strong>punch</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>verbTwo: </strong>kick</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>number: </strong>10</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><strong>yourName:</strong>&nbsp;Zack</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7c8a12ca93b72736d82c12e3e7c87cfc" style="height: auto; min-width: 30px; min-height: 30px; width: 300px; left: 69px; top: 219px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong>Things can go great...</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 312px; left: 588px; top: 219px;" data-block-id="b82378ab8200fbd28ee6c5bc5d72b50d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:left"><strong>Things can go wrong...</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="784e736a303b1aeab512463e893f1356" style="height: auto; min-width: 30px; min-height: 30px; width: 103px; left: 435px; top: 340px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>&nbsp;- OR -&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="231c66d8d44d7aea8e5245620cbc2cff" style="min-width: 4px; min-height: 4px; width: 347px; height: 411px; left: 56px; top: 197px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 17;" data-shape-stroke-color="#000000" data-shape-stroke-width="4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 347 411"><defs><clipPath id="shape-mask-4-1531551821198"><rect width="347" height="411" rx="0" ry="0"></rect></clipPath></defs><rect width="347" height="411" rx="0" ry="0" clip-path="url(#shape-mask-4-1531551821198)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#000000" stroke-width="8"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 347px; height: 411px; left: 564px; top: 197px;" data-block-id="8abb5e42f58aec60a4b1e3098970b0c6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 19;" data-shape-stroke-color="#000000" data-shape-stroke-width="4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 347 411"><defs><clipPath id="shape-mask-5-1531551821201"><rect width="347" height="411" rx="0" ry="0"></rect></clipPath></defs><rect width="347" height="411" rx="0" ry="0" clip-path="url(#shape-mask-5-1531551821201)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#000000" stroke-width="8"></rect></svg></div></div></section><section data-id="e331c73fb9783bf5d5b194ff6095d96e" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="531b8fb4a9022f3b7717f4866cd69f58"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>MadLib with Restrictions</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 679px; left: 141px; top: 167px;" data-block-id="7cd3d3d3699fcda9781583e124bce2a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="c635cb5a-3957-9694-7cf4-d26119d56ca7" data-gramm="true" data-gramm_editor="true">
+<p>As you can see, the MadLib can go from being G-rated PG-13 (or worse)
+ pretty quickly!&nbsp; It may be a good idea to add some restrictions, 
+like an age limit. We can do this by using <strong>conditionals</strong>, allowing someone to play our MadLibs game only if they are a certain age or older.</p>
+
+<p>&nbsp;</p>
+
+<p>This is a great time to talk more about other data types and conditionals.&nbsp; So, let's set the MadLib aside for a moment...</p>
+</div></div></section><section data-id="daebdbe459d255e7386981da916452b3" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="cf19e9c93a2c2858544aa257ed1af36d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>&nbsp;Java Data Types</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f8c3e4179ba410fe969b376a51fa2c79" style="height: auto; min-width: 30px; min-height: 30px; width: 834px; left: 63px; top: 117px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="535c5da3-4761-a26d-e87d-d55a993a286b" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51); text-align:start"><span style="font-size:0.9em"><span class="md-end-block md-focus md-line"><span class="md-expand">As
+ mentioned earlier, every programming language has a way of storing data
+ (variables) and classifying data (data types). Variables are the main 
+way of remembering data as a program is running.</span> </span></span></p>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span style="font-size:0.9em"><span class="md-end-block md-line">When declaring a variable in <strong>Java</strong>, you have to </span></span></p>
+
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+	<p><span style="font-size:0.9em"><span class="md-end-block md-line">Give it a name: variables begin with a lower case letter and are <strong>camelCased</strong> when containing more than one word.</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em"><span class="md-end-block md-line">Give it a type: &nbsp;Tell it the kind of data it will hold (datatype). You also have the option of giving it a value.</span></span></p>
+	</li>
+</ul>
+
+<p style="color:rgb(51, 51, 51); text-align:start"><span style="font-size:0.9em"><span class="md-end-block md-line">Java is a <em>strictly typed</em>&nbsp;language, meaning variables in Java do not change types once they are declared.</span></span></p>
+
+<p style="color:rgb(51, 51, 51); text-align:start">&nbsp;</p>
+</div></div></section><section data-id="774682efddc1065fde8058e51ea62017" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="00c61ece3b9553bb7698436b2c568a05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>&nbsp; Common Java Data Types</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 110px;" data-block-id="1c2739b2e28de427be83ce101e14ba10"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui" data-gramm_id="cf25619a-5cd6-d89c-0292-8d30d5032ffe" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)"><span style="font-size:1.0em"><span class="md-end-block md-line">Java has two types of data types - <strong>Primitive</strong> and <strong>Reference</strong>. </span></span></p>
+
+<ul>
+	<li style="color:rgb(51, 51, 51)">
+<strong><span style="color:rgb(34, 34, 34)">R</span>eference </strong>data types<span style="color:rgb(34, 34, 34)">&nbsp;are </span><span style="color:rgb(34, 34, 34)">based on a class rather than on one of the primitive </span>types<span style="color:rgb(34, 34, 34)">&nbsp;that are built into the </span>Java<span style="color:rgb(34, 34, 34)">&nbsp;language. <span style="color:rgb(34, 34, 34)"> <strong>String</strong> is known as a Reference data type.</span></span>
+</li>
+</ul>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<ul>
+	<li style="color:rgb(51, 51, 51)"><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>Primitive</strong> data types are predefined by the language and named by a keyword. &nbsp;</span></span></li>
+</ul>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:1.0em"><span class="md-end-block md-line">There are eight primitive data types <strong>byte, short, long, int, boolean, float, double and char</strong>. Let's explore some of the more commonly used data types.</span></span></p>
+</div></div></section><section data-id="ebc60a88252caa157d31acf797d82b1a" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="5cff231ae5086aa7faacd9812eb904f2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>&nbsp; Common Primitive Java Data Types</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 910px; left: 25px; top: 49px;" data-block-id="a490cac4a900d60562e04d169dc03333"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 87%;" dir="ui" data-gramm_id="0d4e7cba-99c0-f91d-7542-f29c2a302f4e" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51); text-align:start">&nbsp;</p>
+
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>int</strong></span></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:1.0em"><span class="md-end-block md-line">Integer (int) is generally used as the default data type for whole number values. Example <strong>int total = 45</strong>, where <strong>total</strong>&nbsp;is the variable and the whole number <strong>45</strong> is the value. </span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>double</strong></span></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:1.0em"><span class="md-end-block md-line">double is generally used as the default data type for non-whole numbers (decimals).</span></span><span style="color:rgb(51, 51, 51); text-align:left">Example </span><strong>double tax = 10.33</strong><span style="color:rgb(51, 51, 51); text-align:left">, where &nbsp;</span><strong>tax</strong><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;is the variable and the decimal</span><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;</span><strong>10.33</strong><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;is the value.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>boolean</strong></span></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:1.0em"><span class="md-end-block md-line">This data type is used for simple flags that track true/false conditions and only has two possible values: true or false</span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span class="md-end-block md-line"><strong>char</strong></span></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:1.0em"><span class="md-end-block md-focus md-line">Char data type is used to store any character - numbers, letter, punctuation, etc.</span></span></p>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="e5336c5e272b826269900ccd061bd13b" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 888px; left: 36px; top: 12px;" data-block-id="eff902b12aa1803dd59970c68df0218b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>&nbsp; Java Math Operations using "int" and "float"</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8492ace9bf2dc43ab41d2c53d76a5125" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 88px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="cebac4d8-de41-f718-3af1-f6580c96b7d8" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Integer + (or) - (or) * Integer = Integer</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Integer / Integer = Integer</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">(even if not divisible)</span></p>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Float + (or) - (or) * Float = Float</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Float / Float = Float</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">(if divisible, #.0, so still a Float)</span></p>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Integer + (or) - (or) * Float = Float</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Integer / Float = Float</span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="font-size:0.9em">Float / Integer = Float</span></p>
+</div></div></section><section data-id="b50f93b25564f1e6bb479d21b43ea600" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 936px; left: 12px; top: 34px;" data-block-id="708e0fd46548299008bcfb194ea2a97e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="a7433cce-df88-a529-6494-b577856f3b09" data-gramm="true" data-gramm_editor="true">
+<h3>&nbsp; Java Math Operations using "int" and "double"</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 888px; left: 36px; top: 85px;" data-block-id="136f26d9e584ef56b67fc97d047fe304"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="d9c925ce-dc40-25df-4581-054c12ccbd5f" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)">We've got equation shortcuts!</p>
+
+<p style="color:rgb(51, 51, 51)">We can increment or decrement an integer by using ++ and --.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e514dc7cd964e50da92fcf1ca0088606" style="min-width: 30px; min-height: 30px; width: 378px; height: 167px; left: 80px; top: 239px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 155%;"><pre class="java"><code class="hljs">&gt;<span class="hljs-keyword">int</span> num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2</span>
+&gt; num1 ++;
+<span class="hljs-comment">//increments num1 by 1</span>
+=&gt; <span class="hljs-number">3</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 380px; height: 167px; left: 500px; top: 240px;" data-block-id="e18b4dc6e471d20191d7ad8a1709afc7"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 14; font-size: 155%;"><pre class="java"><code class="hljs">&gt; <span class="hljs-keyword">int</span> num1 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4</span>
+&gt; num1 --;
+<span class="hljs-comment">//decrements num1 by 1</span>
+=&gt; <span class="hljs-number">3</span>
+</code></pre></div></div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 378px; height: 167px; left: 80px; top: 463px;" data-block-id="b9d9dd5d46ca1c51bd607c064f7b57f2"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 15; font-size: 155%;"><pre class="java"><code class="hljs">&gt;<span class="hljs-keyword">double</span> num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2.0</span>
+&gt; num1 ++;
+<span class="hljs-comment">//increments num1 by 1</span>
+=&gt; <span class="hljs-number">3.0</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 378px; height: 167px; left: 503px; top: 463px;" data-block-id="9917acf165b82833d2cfcd51f758cf8a"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 16; font-size: 155%;"><pre class="java"><code class="hljs">&gt;<span class="hljs-keyword">double</span> num1 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4.0</span>
+&gt; num1 --;
+<span class="hljs-comment">//decrements num1 by 1</span>
+=&gt; <span class="hljs-number">3.0</span>
+</code></pre></div></div></section><section data-id="7edbfe433e9d737b5975c2a0e4387df0" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 25px;" data-block-id="f88a20db2da0a777957b4b94fc79c934"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="42e8a7a6-61d8-a1ae-3f3f-82e1590814a7" data-gramm="true" data-gramm_editor="true">
+<h3>&nbsp; Java Math Operations using "int" and "double"</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 888px; left: 36px; top: 85px;" data-block-id="16dbb5936620a2517bfb312bf30e826e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="c606e634-8079-4202-26b7-16c21c3ecb41" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)">We've got equation shortcuts!</p>
+
+<p style="color:rgb(51, 51, 51)">We can stack the operators with an equal sign between variables (only) and reassign the result to the first variable.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 300px; height: 181px; left: 120px; top: 252px;" data-block-id="cc8164e30976610c7771521b7ab1edde"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 117%;"><pre class="java"><code class="hljs">&gt;<span class="hljs-keyword">int</span> num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2</span>
+&gt;<span class="hljs-keyword">int</span> num2 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4</span>
+&gt; num1 += num2;
+=&gt; <span class="hljs-number">6</span>
+<span class="hljs-comment">//value of num1 = 6;</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 300px; height: 179px; left: 120px; top: 440px;" data-block-id="c6d9c82fa757be7e73d06ea508b042fa"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 117%;"><pre class="java"><code class="hljs">&gt; <span class="hljs-keyword">int</span> num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2</span>
+&gt; <span class="hljs-keyword">int</span> num2 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4</span>
+&gt; num1 -= num2;
+=&gt; -<span class="hljs-number">2</span>
+<span class="hljs-comment">//value of num1 = -2</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 299px; height: 173px; left: 553px; top: 252px;" data-block-id="2f6c3817b4dcbbeb1d98efdb5f190bf8"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 14; font-size: 117%;"><pre class="java"><code class="hljs">&gt; <span class="hljs-keyword">int</span> num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2</span>
+&gt; <span class="hljs-keyword">int</span> num2 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4</span>
+&gt; num1 *= num2;
+=&gt; <span class="hljs-number">8</span>
+<span class="hljs-comment">//value of num1 = 8</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 299px; height: 176px; left: 553px; top: 440px;" data-block-id="78605d54bc4a25dcb81c661ffe9d2327"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 15; font-size: 117%;"><pre class="ruby"><code class="hljs">&gt; int num1 = <span class="hljs-number">2</span>;
+=&gt; <span class="hljs-number">2</span>
+&gt; int num2 = <span class="hljs-number">4</span>;
+=&gt; <span class="hljs-number">4</span>
+&gt; num2 /= num1;
+=&gt; <span class="hljs-number">2</span>
+/<span class="hljs-regexp">/value of num2 = 2</span></code></pre></div></div></section><section data-id="0ce479d45f84226c9ebc2f9f34c049cf" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="f768975030aaffa9e59709d4edf0b7ba" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 7px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1 style="color:rgb(17, 17, 17)">The Modulus</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bb4bb138769cb5a9a6fefa0661c75b33" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 116px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="7a414e2f-4819-0018-1f48-2b145861d311" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(17, 17, 17)">Before we move on, let's take a look at a mathematical symbol that will help you more than you'd imagine:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="500ea4de2e72712deef0041f817ea36c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 233px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h1 style="color:rgb(17, 17, 17)"><span style="font-size:1.4em">%</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="423c51fcc13302046fb4e6b0a6dc94a0" style="height: auto; min-width: 30px; min-height: 30px; width: 934px; left: 14px; top: 367px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="ae70de5d-4ffb-0126-a49a-8900794af27f" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em">Yes, that's a percentage symbol, but it's also called the modulus symbol.</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em">When put between two numbers, it returns the remainder of the division of those two numbers.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="8880c1f50db8c8c5dc311f9d6b8336cd" style="min-width: 30px; min-height: 30px; width: 644px; height: 150px; left: 158px; top: 503px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 15; font-size: 126%;"><pre class="java"><code class="hljs"><span class="hljs-number">10</span> % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>;
+<span class="hljs-comment">// because 10 is completely divisible by 5</span>
+
+<span class="hljs-number">15</span> % <span class="hljs-number">6</span> == <span class="hljs-number">3</span>;
+<span class="hljs-comment">//the remainder of the division of 15 by 6 is 3</span></code></pre></div></div></section><section data-id="5f087cb50fe4d218b140b854d4ff1b90" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="acaf8caf92c3090c0553163bac813f3a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>&nbsp; Back to our MadLib</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="03b317aa1778a138c3c6c2d478c778ad" style="height: auto; min-width: 30px; min-height: 30px; width: 946px; left: 11px; top: 540px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="e1641b7c-1fba-8270-b253-d05c5335a750" data-gramm="true" data-gramm_editor="true">
+<p>Let's set an age limit on who can participate in this activity.&nbsp;
+ Because things can get a little out of hand, we want to keep it only 
+for adults.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 916px; height: 443px; left: 26px; top: 88px;" data-block-id="955353e010b1198917762c459e91670a"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 14; font-size: 94%;"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MadLib</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        
+          Scanner userInput = <span class="hljs-keyword">new</span> Scanner(System.in);
+          System.out.println(<span class="hljs-string">"Enter a name: "</span>);
+          String name = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me an adjective: "</span>);
+          String adjective = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a verb: "</span>);
+          String verbOne = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me another verb: "</span>);
+          String verbTwo = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a number: "</span>);
+          String number = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me your name: "</span>);
+          String yourName = userInput.nextLine();
+
+          System.out.printf(<span class="hljs-string">"Here is your story: \n"</span>);
+          System.out.printf(<span class="hljs-string">"\n Dear %s,"</span>, name);
+          System.out.printf(<span class="hljs-string">"\n You are extremely %s and I want to %s you!"</span>, adjective, verbOne);
+          System.out.printf(<span class="hljs-string">"\n I want to %s you %s times."</span>, verbTwo, number);
+          System.out.printf(<span class="hljs-string">"\n Sincerely, %s \n"</span>, yourName);
+
+          
+
+	}
+}</code></pre></div></div></section><section data-id="c866d363fad2513e5e981e520ba15f91" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="7ccaa62cc04ab744572c1a4242e1baef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>&nbsp; Set an Age Limit&nbsp;</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 401px;" data-block-id="df1083cc4c5e93c8220de21e7372256a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Let's set an age limit on who can participate in this activity.&nbsp;
+ Because things can get a little out of hand, we want to keep it only 
+for adults.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 632px; height: 242px; left: 164px; top: 140px;" data-block-id="4c6c6b44c4c100b1ae42b0210ba53ac7"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 94%;"><pre class="java"><code style="padding: 7px;" class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MadLib</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        
+           <span class="hljs-keyword">int</span> ageLimit = <span class="hljs-number">18</span>;
+
+    <span class="hljs-comment">//our code continues below</span>
+
+	}
+}
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 191px; height: 25px; left: 262px; top: 236px;" data-block-id="5f11f88eb93f74597b4721005a866ee3"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 191 25"><defs><clipPath id="shape-mask-3-1531551818999"><rect width="191" height="25" rx="0" ry="0"></rect></clipPath></defs><rect width="191" height="25" rx="0" ry="0" clip-path="url(#shape-mask-3-1531551818999)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="6"></rect></svg></div></div></div></section><section data-id="c610c8e852fe28b48857aa58e7fa8799" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="73110f50a4fd9dd36e8d69f5af40d902"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Request the age of the User</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 932px; height: 155px; left: 15px; top: 292px;" data-block-id="5a0501a5105e07247371711ab0969083"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 11; font-size: 141%;"><pre class="ruby"><code class="hljs">int ageLimit = <span class="hljs-number">18</span>;
+
+System.out.println(<span class="hljs-string">"How old are you?"</span>);
+
+int age = Integer.parseInt(userInput.nextLine());</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 756px; left: 93px; top: 140px;" data-block-id="072afb608e15575f1823a8d387e6c46d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>First we declare an integer variable <strong>"ageLimit"</strong> with a value of 18.&nbsp; Next, we declare another variable&nbsp; "age" that we will use to store the user's age.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 71px; top: 457px;" data-block-id="96ee36c55b20dcf55cb1bb3a446f912e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="b31cedc7-8109-f45e-ceba-57756175a821" data-gramm="true" data-gramm_editor="true">
+<p>Now, we compare the user's age with the age limit and only let them through IF they are over 18.&nbsp; &nbsp;&nbsp;</p>
+
+<p><span style="color:rgb(17, 17, 17)">...we need to take another break from MadLibs to talk about...</span></p>
+</div></div></section><section data-id="798f15a64ef0b3ab935e9ddb7473b395" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="d91c70459e0376ebe62177d155a989a8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>&nbsp;Conditional Statements</h2>
+
+<h3>if/else</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 82px; top: 178px;" data-block-id="6aaffc2e48c8c21ffbc322f8d1b0c867"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Conditionals in Java have the following Structure:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 712px; height: 212px; left: 143px; top: 244px;" data-block-id="f814c46c51cec6214d86a88632feaba9"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 156%;"><pre class="java"><code style="padding: 7px;" class="hljs"><span class="hljs-keyword">if</span> (condition){
+  <span class="hljs-comment">//task to perform if condition is TRUE</span>
+} <span class="hljs-keyword">else</span> {
+
+   <span class="hljs-comment">//task to perform if condition is FALSE</span>
+}</code></pre></div></div></section><section data-id="e96dc24b80184bcf781ce03f22cbe8d9" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 15px;" data-block-id="763fb4e14c187a44b34159322c88cd48"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>&nbsp;DRYer if Statement</h2>
+
+<h3>&nbsp;</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 162px;" data-block-id="f2b6758988debb6fd8c3ac36d00a6828"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>An <strong>if</strong>&nbsp;statement does not have to be in block form, it can also be written in single line form with no <strong>else</strong>&nbsp;statement.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 751px; height: 84px; left: 106px; top: 280px;" data-block-id="06c94b5f0068b32d966846540b78e744"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 156%;"><pre class="java"><code style="padding: 7px;" class="hljs"><span class="hljs-keyword">int</span> x = <span class="hljs-number">30</span>;
+<span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">20</span>) console.print(<span class="hljs-string">"Print true!"</span>);</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 82px; top: 403px;" data-block-id="f997b039839faf59d6799dbf946a6c05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>The statement will only be printed if the condition evaluates to true.</p>
+</div></div></section><section data-id="9fc3fdaa66ab5b5f5093f8267b281504" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="ec317c94be295b7080ac0377a79695b9" class="sl-block" data-block-type="text" style="width: 800px; left: 61px; top: 11px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h3>Java non-string Comparison Symbols</h3>
+</div></div>
+<div data-block-id="6564c73ba99cdb8d946eb4c00ef85a39" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-type="text" class="sl-block"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<p><span style="font-size:32px">Equals</span></p>
+
+<p><strong>==</strong></p>
+
+<p>Does Not Equal</p>
+
+<p><strong><span style="font-size:32px">!=</span></strong></p>
+
+<p>Less Than</p>
+
+<p><strong>&lt;</strong></p>
+
+<p>Less Than or Equal To</p>
+
+<p><strong>&lt;=</strong></p>
+
+<p>Greater Than</p>
+
+<p><strong>&gt;</strong></p>
+
+<p>Greater Than or Equal To</p>
+
+<p><strong>&gt;=</strong></p>
+</div></div></section><section data-id="4951ee32d67537baf0aafa8a543b5d74" aria-hidden="true" class="future" style="display: none;" hidden=""><div class="sl-block" data-block-type="text" style="width: 800px; left: 60px; top: 36px; height: auto;" data-block-id="6e96511a0a7d615baf7f8c883ad8d071"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h3>Java String Comparison Symbols</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="937a12725b0e9c7d7c9fba5da53fe2f8" style="min-width: 30px; min-height: 30px; width: 800px; height: 376px; left: 71px; top: 201px;"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 79%;"><pre class="java"><code style="padding: 9px;" class="hljs"><span class="hljs-comment">//Using Object.equals() checks value equality and is best for string comparisons</span>
+
+String word1 = <span class="hljs-string">"Hello"</span>;
+String word2 = <span class="hljs-string">"Hello"</span>;
+String word3 = <span class="hljs-string">"Goodbye"</span>;
+
+word1.equals(word2); <span class="hljs-comment">//true</span>
+word1.equals(word3); <span class="hljs-comment">//false</span>
+
+<span class="hljs-comment">// These two have the same value</span>
+<span class="hljs-keyword">new</span> String(<span class="hljs-string">"Hello World"</span>).equals(<span class="hljs-string">"Hello World"</span>) <span class="hljs-comment">// --&gt; true </span>
+
+<span class="hljs-comment">// "==" checks if they are the same object, and they are not the same object</span>
+<span class="hljs-comment">//One is a string object the other is a literal</span>
+<span class="hljs-keyword">new</span> String(<span class="hljs-string">"Hello World"</span>) == <span class="hljs-string">"Hello World"</span> <span class="hljs-comment">// --&gt; false </span>
+
+<span class="hljs-comment">// These are both String objects, but not the same </span>
+<span class="hljs-keyword">new</span> String(<span class="hljs-string">"Hello World"</span>) == <span class="hljs-keyword">new</span> String(<span class="hljs-string">"Hello World"</span>) <span class="hljs-comment">// --&gt; false </span>
+
+<span class="hljs-comment">// Literals are interned strings and seen as the same object by the compiler </span>
+<span class="hljs-string">"test"</span> == <span class="hljs-string">"test"</span> <span class="hljs-comment">// --&gt; true </span>
+
+<span class="hljs-comment">// String literals are concatenated by the compiler yet the results are not seen as the same object.</span>
+<span class="hljs-string">"Hello World"</span> == <span class="hljs-string">"Hello "</span> + <span class="hljs-string">"World"</span> <span class="hljs-comment">// --&gt; false</span>
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a126d72544503485fb28fd14310032cb" style="height: auto; min-width: 30px; min-height: 30px; width: 901px; left: 20px; top: 92px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="11b6db38-b917-98a1-0ad0-25121d327b0b" data-gramm="true" data-gramm_editor="true">
+<p>String comparisons are a little different.&nbsp; &nbsp; When checking to see if two string are equal, we use <strong>Object.equals()</strong>, method. &nbsp;</p>
+</div></div></section><section data-id="3f0a4543ed71e4a2cac29c1e2388de59" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="a564aca370964bf526c675d793873e78" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 19px;" data-block-type="text" class="sl-block"><div style="z-index: 11;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<h2>If/Else Activities</h2>
+</div></div>
+
+<div data-block-id="4c2408995665853e9542c1083de4f3a8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 197px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 13; color: rgb(0, 0, 0);" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment" data-gramm_id="6f3364ce-9e15-b79f-72bf-c57a9ee2c8a9" data-gramm="true" data-gramm_editor="true">
+<ul>	<li>Dog Says Cat Says: ask <g class="gr_ gr_10 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Grammar only-ins doubleReplace replaceWithoutSep" id="10" data-gr-id="10">user</g> to enter 'dog' or 'cat', <g class="gr_ gr_11 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Grammar only-ins replaceWithoutSep" id="11" data-gr-id="11">program</g> prints animal's sound</li>	<li><span style="color:rgb(17, 17, 17)">Guessing Game: <g class="gr_ gr_12 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Grammar only-ins replaceWithoutSep" id="12" data-gr-id="12">user</g> provides a number (between 1 and 10), if the number stored in the program is the same, "Wow!", else, "Nope!"</span></li>	<li><span style="color:rgb(17, 17, 17)">Ask
+ the user for their number grade, if the grade is at least 60, tell them
+ they passed! If it's lower than 60, tell them they have to take the 
+class again.</span></li>
+</ul>
+</div></div>
+
+<div data-block-id="abdfaac632310293ac5b761f1f1adb75" style="height: auto; min-width: 30px; min-height: 30px; width: 760px; left: 80px; top: 92px;" data-block-type="text" class="sl-block"><div style="z-index: 14;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<p><span style="font-size:1.0em">Create another program call <strong>IfElsePractice.java</strong> and try out these examples</span></p>
+</div></div>
+</section><section data-id="036641ea55956fd9dd2fbb7574bcc50d" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="a0b10c6a92e0629d2fac6ac6a425b7c9" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 8px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>But what if...</h2>
+</div></div>
+<div data-block-id="95eda25f0a40b3ee5a78c7ebd6b58999" style="height: auto; min-width: 30px; min-height: 30px; width: 699px; left: 131px; top: 81px;" data-block-type="text" class="sl-block"><div style="z-index: 12; white-space: normal;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="cd0dad6b-5b2c-149a-9ebf-be76921cb961" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:1.0em">Maybe you want to give your program more choice. You can add as many <strong>else if </strong>statements as you need &nbsp;in between your <strong>if </strong>and <strong>else</strong>.</span></p>
+</div></div>
+<div data-block-id="3256853500f4fc11a5eae3cb6d023b0f" style="min-width: 30px; min-height: 30px; width: 800px; height: 256px; left: 80px; top: 234px;" data-block-type="code" class="sl-block"><div style="z-index: 13; font-size: 115%; border-style: solid; border-width: 1px; border-radius: 5px; border-color: rgb(68, 68, 68);" class="sl-block-content notranslate" data-highlight-theme="zenburn"><pre class="ruby"><code class="hljs"><span class="hljs-keyword">if</span> (condition1){
+      <span class="hljs-regexp">//task</span> to perform <span class="hljs-keyword">if</span> condition1 is TRUE;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition2){
+      <span class="hljs-regexp">//task</span> to perform <span class="hljs-keyword">if</span> condition2 is TRUE;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition3){
+      <span class="hljs-regexp">//task</span> to perform <span class="hljs-keyword">if</span> condition3 is TRUE;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition4){
+      <span class="hljs-regexp">//task</span> to perform <span class="hljs-keyword">if</span> condition4 is TRUE;
+} <span class="hljs-keyword">else</span> {
+     <span class="hljs-regexp">//task</span> to perform <span class="hljs-keyword">if</span> NONE of the above conditions are TRUE;
+}</code></pre></div></div>
+</section><section data-id="c3322a44beed1105f330898c6486cced" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="2c40034d8847df28369a5e6f0c4287e7" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 14px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Else if Exercise</h2>
+</div></div>
+<div data-block-id="bd737daaf1c2697741b304227416f9f4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 106px;" data-block-type="text" class="sl-block"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="efa501f4-3f61-db63-1e43-b3add8c783de" data-gramm="true" data-gramm_editor="true">
+<p>Update the Dog Says Cat Says program:</p>
+
+<ul>
+	<li>Ask the user for an animal</li>
+	<li>Use if/else conditionals to program in a number of animal sounds</li>
+	<li>Use last else for unknown animals</li>
+</ul>
+</div></div>
+<div data-block-id="d83962cec4d6df4e5c85859493be744b" style="min-width: 4px; min-height: 4px; width: 360px; height: 270px; left: 300px; top: 333px;" data-block-type="image" class="sl-block"><div style="z-index: 13; border-style: solid; border-width: 1px; border-color: rgb(255, 255, 255); border-radius: 5px;" class="sl-block-content"><img data-natural-height="768" data-natural-width="1024" style="visibility: visible;" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/techtalentsouth/images/1003014/what-the-fox-says.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="57c26240a414f50e89df5e66a3d7829f" style="height: auto; min-width: 30px; min-height: 30px; width: 468px; left: 246px; top: 615px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 33%;">
+<p>&lt;Image Source: <a href="https://kahlich.files.wordpress.com/2013/09/what-the-fox-says.jpg" target="_blank">https://kahlich.files.wordpress.com/2013/09/what-the-fox-says.jpg</a>&gt;</p>
+</div></div></section><section data-id="4d9f2bb0ea9f1db7ff0b03fe4bce1648" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="b65a530a5dc0263e9bf9c5f3ce6ac899" class="sl-block" data-block-type="text" style="width: 908px; left: 26px; top: 53px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>I'll Do It; On Two Conditions...</h2>
+</div></div>
+<div data-block-id="af22e7d387f29e5f0ccd0d685bf54509" style="height: auto; min-width: 30px; min-height: 30px; width: 945px; left: 8px; top: 158px;" data-block-type="text" class="sl-block"><div class="sl-block-style" style="z-index: 12; transform: rotate(360deg);"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="72a5c21c-3dea-f080-6476-02d0ef833c05" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:1.0em">Sometimes you want two conditions to be met before you perform a task. This is where <strong>AND</strong> and <strong>OR</strong> come in handy.</span></p>
+
+<p><span style="font-size:1.0em"><strong>AND </strong>is written as two ampersands ( &amp;&amp; ),<strong> OR </strong>is written as two pipes ( || ).</span></p>
+
+<p><span style="font-size:1.0em">Note: you need to make the comparison on both sides of the <strong>&amp;&amp;&nbsp; </strong>or <strong>||</strong>.</span></p>
+</div></div></div>
+<div data-block-id="07b984cd3d2a4a388943edd0e557623b" style="min-width: 30px; min-height: 30px; width: 619px; height: 236px; left: 171px; top: 372px;" data-block-type="code" class="sl-block"><div style="z-index: 13; border-style: solid; border-width: 1px; border-color: rgb(68, 68, 68); border-radius: 5px; font-size: 90%;" class="sl-block-content notranslate" data-highlight-theme="zenburn"><pre class="java"><code class="hljs"><span class="hljs-keyword">if</span> (sum &gt; <span class="hljs-number">13</span> &amp;&amp; sum &lt; <span class="hljs-number">26</span>) {
+    System.out.println(<span class="hljs-string">"Right in the sweet spot."</span>);
+} <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">"Too little, too much."</span>);
+}
+
+
+<span class="hljs-comment">// when comparing strings remember to use equals() method</span>
+<span class="hljs-keyword">if</span> (choice.equals(<span class="hljs-string">"cash"</span>) || choice.equals(<span class="hljs-string">"credit"</span>)) {
+    System.out.println(<span class="hljs-string">"Thanks for shopping at our store."</span>);
+} <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">"Sorry, we don't accept checks."</span>);
+}</code></pre></div></div></section><section data-id="2d59ef980848260f81d1d11a724f5af7" aria-hidden="true" class="future" style="display: none;" hidden=""><div data-block-id="09663791c759fe32f2f37ffbd9f12155" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>AND/OR ​Exercise</h1>
+</div></div>
+<div data-block-id="260cc4389306f5ab7f60f751b25fdc29" style="height: auto; min-width: 30px; min-height: 30px; width: 684px; left: 138px; top: 131px;" data-block-type="text" class="sl-block"><div style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="2e1d0afd-6bd6-6089-1ef4-bcc8907aab52" data-gramm="true" data-gramm_editor="true">
+<p>Update the Guessing Game program:</p>
+
+<ul>
+	<li>Ask the user for a number between 1 &amp; 100</li>
+	<li>Use both AND/OR to test for exactness and closeness</li>
+	<li>e.g., if the guess is only five away, have a message to say something like "Oh! So close!"</li>
+</ul>
+</div></div>
+<div data-block-id="270681a992a0fa8f147960b1bc5025fe" style="min-width: 4px; min-height: 4px; width: 410.256px; height: 256px; left: 275px; top: 398px;" data-block-type="image" class="sl-block"><div style="z-index: 13;" class="sl-block-content"><img data-natural-height="312" data-natural-width="500" style="visibility: visible;" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/techtalentsouth/images/1003029/guess-number.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d500277f62f0cdf0ffff7b1efc6d77f0" style="height: auto; min-width: 30px; min-height: 30px; width: 189px; left: 691px; top: 598px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 36%;">
+<p>&lt;Image Source: <a href="https://lifeofahomeschoolersite.files.wordpress.com/2017/06/guess-number.jpg?w=280&amp;h=280&amp;crop=1" target="_blank">https://lifeofahomeschoolersite.files.wordpress.com/2017/06/guess-number.jpg?w=280&amp;h=280&amp;crop=1</a>&gt;</p>
+</div></div></section><section data-id="faed54d7ab77f781b752947f56132334" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 47px; top: 16px;" data-block-id="477ea9bee55e41dd23a5b8b26bb104ed"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>&nbsp;Back to the MadLib</h2>
+
+<h3>Adding a conditional for age</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 814px; height: 140px; left: 75px; top: 152px;" data-block-id="0d45666ff8125a67f50d927a3600bcd1"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 124%;"><pre class="ruby"><code class="hljs">int ageLimit = <span class="hljs-number">18</span>;
+
+System.out.println(<span class="hljs-string">"How old are you?"</span>);
+
+int age = Integer.parseInt(userInput.nextLine());
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7df35b187813c0a19165ddff44858d38" style="height: auto; min-width: 30px; min-height: 30px; width: 270px; left: 25px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:#FF0000"><strong>What's this?</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="6574ba1634723fa450588b976135debe" style="min-width: 4px; min-height: 4px; width: 15px; height: 42px; left: 253px; top: 300px;"><div class="sl-block-style" style="z-index: 14; transform: rotate(45deg);"><div class="sl-block-content" data-shape-type="arrow-up" data-shape-fill-color="rgb(204, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 15 42"><polygon points="7.5,0 15,21 10.5,21 10.5,42 4.5,42 4.5,21 0,21 7.5,0" class="shape-element" fill="rgb(204, 0, 0)"></polygon></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="4801295b6369fc94eff38e0281963401" style="min-width: 4px; min-height: 4px; width: 856px; height: 73px; left: 52px; top: 229px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 856 73"><defs><clipPath id="shape-mask-2-1531551816142"><rect width="856" height="73" rx="0" ry="0"></rect></clipPath></defs><rect width="856" height="73" rx="0" ry="0" clip-path="url(#shape-mask-2-1531551816142)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="6"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2a259723da0aa84c0ce7befe85c5378f" style="height: auto; min-width: 30px; min-height: 30px; width: 933px; left: 14px; top: 382px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="a0ef269c-ec51-ade5-53ab-af157e460240" data-gramm="true" data-gramm_editor="true">
+<p>When getting input using <strong>userInput.nextLine()</strong>, the data is captured as a <strong>String type</strong>. Since we are looking for an integer value, we need to convert the input to an integer.&nbsp; We do this by using</p>
+
+<p><strong>Integer.parseInt()</strong></p>
+
+<p>which takes the input, converts it to an integer, and allows it to be stored in the <strong>age</strong> variable (which has been declared an integer value).</p>
+</div></div></section><section data-id="da3695acc6c1075a8523955a74ec74e4" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 47px; top: 18px;" data-block-id="dc6cd85322b012dc352eeab29ef8e7d9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>&nbsp;Comparing age and ageLimit</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 867px; left: 46px; top: 393px;" data-block-id="8737280b494ec4a67ecb64c16b7eeae4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="b8995fb7-6996-f4c3-04c0-367d18d8d121" data-gramm="true" data-gramm_editor="true">
+<p>We set up our conditional to compare the variable age and 
+ageLimit.&nbsp; If age is less than ageLimit, they will receive a 
+message stating they are too young to play and will be exited from the 
+program. Finally, we add the rest of the code in the <strong>else</strong> brackets, allowing the user to play if they meet the age requirement.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 611px; height: 228px; left: 175px; top: 131px;" data-block-id="49f44e9112cdf8b99c326bee753c058a"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 13; font-size: 94%;"><pre class="java"><code style="padding: 7px;" class="hljs"><span class="hljs-keyword">int</span> ageLimit = <span class="hljs-number">18</span>;
+    
+System.out.println(<span class="hljs-string">"How old are you?"</span>);
+
+<span class="hljs-keyword">int</span> age = Integer.parseInt(userInput.nextLine());
+
+<span class="hljs-keyword">if</span> (age &lt; ageLimit){
+  System.out.println(<span class="hljs-string">"You are too young! Sorry!"</span>);
+  System.exit(<span class="hljs-number">0</span>);
+} <span class="hljs-keyword">else</span> {
+   <span class="hljs-comment">//Program continues as normal because they past the age test!</span>
+}</code></pre></div></div></section><section data-id="dd8fb371234b10f740f421e1840016b5" aria-hidden="true" class="future" style="display: none;" hidden="">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 47px; top: 0px;" data-block-id="f1c9d3240a9b8420573854550f705a62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Our MadLib</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 832px; height: 614px; left: 64px; top: 74px;" data-block-id="53c683b3504d2c3d6d9fb28caa8aa2be"><div class="sl-block-content notranslate" data-highlight-theme="zenburn" style="z-index: 12; font-size: 80%;"><pre class="java"><code style="padding: 7px;" class="hljs"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MadLib</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+
+          Scanner userInput = <span class="hljs-keyword">new</span> Scanner(System.in);      
+          <span class="hljs-keyword">int</span> ageLimit = <span class="hljs-number">18</span>;
+    
+          System.out.println(<span class="hljs-string">"How old are you?"</span>);
+          
+          <span class="hljs-keyword">int</span> age = Integer.parseInt(userInput.nextLine());
+
+
+          <span class="hljs-keyword">if</span> (age &lt; ageLimit){
+            System.out.printf(<span class="hljs-string">"You are too young! Sorry!\n"</span>);
+            System.exit(<span class="hljs-number">0</span>);
+          } <span class="hljs-keyword">else</span> {
+
+          Scanner userInput = <span class="hljs-keyword">new</span> Scanner(System.in);
+          System.out.println(<span class="hljs-string">"Enter a name: "</span>);
+          String name = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me an adjective: "</span>);
+          String adjective = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a verb: "</span>);
+          String verbOne = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me another verb: "</span>);
+          String verbTwo = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me a number: "</span>);
+          String number = userInput.nextLine();
+          System.out.println(<span class="hljs-string">"Give me your name: "</span>);
+          String yourName = userInput.nextLine();
+
+          System.out.printf(<span class="hljs-string">"Here is your story: \n"</span>);
+          System.out.printf(<span class="hljs-string">"\n Dear %s,"</span>, name);
+          System.out.printf(<span class="hljs-string">"\n You are extremely %s and I want to %s you!"</span>, adjective, verbOne);
+          System.out.printf(<span class="hljs-string">"\n I want to %s you %s times."</span>, verbTwo, number);
+          System.out.printf(<span class="hljs-string">"\n Sincerely, %s \n"</span>, yourName);
+
+          }
+      }    
+
+}
+</code></pre></div></div></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background present" data-background-hash="0https://s3.amazonaws.com/media-p.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpegnullnullnullnullnullnullnull" style="display: block;" data-loaded="true"><div class="slide-background-content" style="background-image: url(&quot;https://s3.amazonaws.com/media-p.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg&quot;);"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;" data-controls-layout="bottom-right" data-controls-back-arrows="faded"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="#/"><span class="slide-number-a">1</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">
+Java: An Introduction
+
+</div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 110px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Java Introduction (Code Immersion) - HC</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 234px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+
+			<div class="deck-options">
+				<a class="fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/java-introduction/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+
+
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Java Introduction (Code Immersion) - HC</h1>
+				<p class="description">Let's learn the basics of Java, the world's most versatile language!</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2018-05-23 19:31:33 UTC">a year ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. </p>
+		<ul class="links">
+			 <li><a target="_blank" href="http://techtalentsouth.com/"><span class="icon i-link"></span>techtalentsouth.com</a></li> 
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+	<section class="deck-list">
+		<h2>More from <a href="https://techtalentsouth.slides.com/techtalentsouth">Tech Talent South</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/kids-code-html-1329"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6e3e0319952e0ca2d43ec1257b38bf52/thumb.jpg?1532543696)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Copy of Demo: HTML</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>633<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/2016-jax-summer-active-record-and-musicdb-1327"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6e3e0319952e0ca2d43ec1257b38bf52/thumb.jpg?1532543696)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Demo: HTML</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>525<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/program-your-alexa-1326"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6cc06c5d3c2542e0e0323c4008b245c7/thumb.jpg?1528405882)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Copy of Program your Alexa!</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>454<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="https://techtalentsouth.slides.com/techtalentsouth/program-your-alexa"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/6cc06c5d3c2542e0e0323c4008b245c7/thumb.jpg?1528405882)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Program your Alexa!</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="https://techtalentsouth.slides.com/techtalentsouth">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Tech Talent South</span>
+      </a>
+      <div class="stats">
+        <div>517<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="http://help.slides.com/">Help &amp; Support</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2019 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":5,"allow_scripts":false,"themes":[{"id":2251,"created_at":"2019-07-22T13:10:13.134Z","updated_at":"2019-07-22T14:58:25.859Z","name":"TTS Large","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/243b041f144a8ab4ca39ff3af30cb27e/thumb.jpg?1563807503","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":1440,"height":900},{"id":1853,"created_at":"2018-06-09T00:36:22.757Z","updated_at":"2018-06-09T01:18:32.427Z","name":"Levvel","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/ef87fb673a38dd8da678205742063ab8/thumb.jpg?1528507109","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2019-06-12T19:29:17.263Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1560367755","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"Lato","width":960,"height":700},{"id":1447,"created_at":"2017-03-13T00:03:40.135Z","updated_at":"2018-04-10T15:56:56.447Z","name":"Loyola","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/56c630deb6992e60252a34d556a5bbb7/thumb.jpg?1523375814","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},{"id":541,"created_at":"2015-04-15T18:49:54.356Z","updated_at":"2015-05-05T00:42:29.115Z","name":"Zach-TTS","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/d3c007/themes.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":null,"font_google":null,"width":960,"height":700},{"id":410,"created_at":"2015-01-25T21:08:11.722Z","updated_at":"2015-04-01T18:28:09.367Z","name":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/8275da/themes.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":null,"font_google":null,"width":960,"height":700},{"id":393,"created_at":"2015-01-12T17:23:52.794Z","updated_at":"2017-02-24T14:28:36.984Z","name":"Lesson-Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/6d87e076819b0ccdf38a166e436a95f7/thumb.jpg","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700}],"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":""},"deck":{"id":1261355,"slug":"java-introduction","title":"Java Introduction (Code Immersion) - HC","description":"Let's learn the basics of Java, the world's most versatile language!","width":960,"height":700,"visibility":"self","published_at":"2015-01-26T21:37:26.372Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/05ca3bc010e8a4da9b5e2664ebe928ea/thumb.jpg?1565374226","view_count":84,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":51,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1565637435348,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2019-06-12T19:29:17.263Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1560367755","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South is a coding bootcamp for Adults who want to learn how to develop web applications. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="Java%20Overview_files/application-51cb9ccb208d3a9e50bd27d2be31785755b56509075c39aeb.js" defer="defer"></script>
+    	<script src="Java%20Overview_files/deck-243d1f21275ef245a32e198dae7307162ef2b140f3261e01751aa164.js" defer="defer"></script>
+	
+
+
+  
+
+</body></html>

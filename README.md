@@ -6,3 +6,5 @@
 ## Homework 
 *  PieChart
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
+* JS Libraries
+    - [Live Demo](https://jslibraries.netlify.com/) - Exercise: Visualize and inspect the results of the different library operations

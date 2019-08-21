@@ -4,7 +4,7 @@
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 ## Homework 
-*  PieChart
+*  PieChart (Under Construction)
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
 * JS Libraries (Under Construction)
     - [Live Demo](https://jslibraries.netlify.com/) - Exercise: Visualize and inspect the results of the different library operations
@@ -16,4 +16,3 @@
     - [Live Demo]() - Exercise: 
 * Angular Animations, Testing and Visual Components
     - [Live Demo]() - Exercise:
-    

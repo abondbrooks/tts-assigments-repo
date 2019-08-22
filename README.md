@@ -4,7 +4,7 @@
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 ## Homework 
-*  PieChart (Under Construction)
+*  CSS Homework (Under Construction)
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
     - [Live Demo](https://mastheadcss.netlify.com) - Exercise: Build Masthead
 * JS Libraries (Under Construction)

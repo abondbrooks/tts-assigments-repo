@@ -8,7 +8,7 @@
     - [Live Demo](https://mastheadcss.netlify.com) - Exercise: Build Masthead
 * JS Libraries (Under Construction)
     - [Live Demo](https://jslibraries.netlify.com/) - Exercise: Visualize and inspect the results of the different library operations 
-	- [[Live Code Repo]](https://bitbucket.org/itsjustnae/jslibraries-lab2/src/master/) - Bitbucket
+	- [Code Repo](https://bitbucket.org/itsjustnae/jslibraries-lab2/src/master/) - Bitbucket
 * Bootstrap and MVC, MVVM (Under Construction)
     - [Live Demo](https://bootstraphw.netlify.com/) - Exercise: Create a basic html page. It should include the jQuery library. Add some simple content
 * Angular Basics (Under Construction)

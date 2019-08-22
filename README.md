@@ -6,6 +6,7 @@
 ## Homework 
 *  PieChart (Under Construction)
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
+    - [Live Demo](https://mastheadcss.netlify.com) - Exercise: Build Masthead
 * JS Libraries (Under Construction)
     - [Live Demo](https://jslibraries.netlify.com/) - Exercise: Visualize and inspect the results of the different library operations
 * Bootstrap and MVC, MVVM

@@ -1,9 +1,8 @@
-## Lab Activity
+## Lab Activity / Homework 
 *  EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
-## Homework 
 *  CSS Homework (Under Construction)
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
     - [Live Demo](https://mastheadcss.netlify.com) - Exercise: Build Masthead

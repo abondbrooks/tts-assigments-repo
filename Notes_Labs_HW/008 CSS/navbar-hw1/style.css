@@ -18,14 +18,22 @@ body {
     background-color: #97a7b3;
     color: white;
 }
-.text-links{
+.signin-cart{
+    color:white;
     overflow: visible;
-    margin-top:-68px;
+    margin-left:800px;
+    margin-top:-63px;
+}
+.text-links{
+    
+    overflow: visible;
+    margin-top:-72px;
     margin-left:130px;
     position:relative;
 }
-.links > li{
-    font-size:4vh;
-    display:inline-flex;
-    margin:10px;
+
+ul > li{
+    color:white;
+  display:inline-flex;
+  margin:15px;  
 }

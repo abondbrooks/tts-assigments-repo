@@ -3,7 +3,7 @@
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
-*  CSS Homework (Under Construction)
+*  CSS Homework
     - [Live Demo](https://piechart.netlify.com/) -  Exercise: Build a Pie Chart
     - [Live Demo](https://mastheadcss.netlify.com) - Exercise: Build Masthead
 * JS Libraries (Under Construction)

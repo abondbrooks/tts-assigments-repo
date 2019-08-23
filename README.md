@@ -15,7 +15,7 @@
 		- [Code Repo](https://bitbucket.org/itsjustnae/jslibraries-lab2/src/master/) - Bitbucket
 * Bootstrap and MVC, MVVM (Under Construction)
     - [Live Demo](https://bootstraphw.netlify.com/) - Exercise: Create a basic html page. It should include the jQuery library. Add some simple content
-    - [Code Repo](https://bitbucket.org/itsjustnae/bootstraphw/src/master/) - Bitbucket
+     - [Code Repo](https://bitbucket.org/itsjustnae/bootstraphw/src/master/) - Bitbucket
 * Angular Basics (Under Construction)
     - [Live Demo]() - Exercise: 
 * Angular with Services and Dependency Injection (Under Construction)

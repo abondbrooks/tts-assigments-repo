@@ -1,4 +1,4 @@
-## Lab / Homework Activity --> Go to Personal Projects [Repo](https://github.com/azanaebondbrooks/frontend-mania-repo)
+## Lab / Homework Activity --> Checkout My Personal Projects [Repo](https://github.com/azanaebondbrooks/frontend-mania-repo)
 *  EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 		- [Code Repo](https://bitbucket.org/itsjustnae/emojibomb-lab1/src/master/) - Bitbucket

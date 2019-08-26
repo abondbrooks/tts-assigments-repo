@@ -1,8 +1,7 @@
 ## Lab / Homework Activity --> Checkout My Personal Projects [Repo](https://github.com/azanaebondbrooks/frontend-mania-repo)
 *  EmojiBomb
-    - [Live Demo](https://emojibombstories.netlify.com/)
+    - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 		- [Code Repo](https://bitbucket.org/itsjustnae/emojibomb-lab1/src/master/) - Bitbucket
-          - Desription: Build a simple webpage
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 		- [Code Repo](https://bitbucket.org/itsjustnae/rockpaperscissors-lab2/src/master/) - Bitbucket

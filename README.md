@@ -1,4 +1,4 @@
-## Lab / Homework Activity --> Checkout My Personal Projects [Repo](https://github.com/azanaebondbrooks/frontend-mania-repo)
+## Lab / Homework  --> Checkout My Personal Projects [Repo](https://github.com/azanaebondbrooks/frontend-mania-repo)
 - EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/) -  Exercise: Build a simple webpage
 		- [Code Repo](https://bitbucket.org/itsjustnae/emojibomb-lab1/src/master/) - Bitbucket
@@ -16,6 +16,7 @@
 - Bootstrap and MVC, MVVM (Under Construction)
     - [Live Demo](https://bootstraphw.netlify.com/) - Exercise: Create a basic html page. It should include the jQuery library. Add some simple content
        - [Code Repo](https://bitbucket.org/itsjustnae/bootstraphw/src/master/) - Bitbucket
+## Java Lab / Homework
 - Java Type And Variables
     * Compiled View
          ![Alt Text](testcase.gif)

@@ -2,7 +2,7 @@
 *  EmojiBomb
     - [Live Demo](https://emojibombstories.netlify.com/)
 		- [Code Repo](https://bitbucket.org/itsjustnae/emojibomb-lab1/src/master/) - Bitbucket
-        - Desription: Build a simple webpage
+          - Desription: Build a simple webpage
 *  RockPaperScissors Challenge
     - [Live Demo](https://rockpaperscissorschallenge.netlify.com/) -  Exercise: Make a RockPaperScissors Game
 		- [Code Repo](https://bitbucket.org/itsjustnae/rockpaperscissors-lab2/src/master/) - Bitbucket

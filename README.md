@@ -19,4 +19,4 @@
 - Java Type And Variables
     * Compiled View
          ![Alt Text](testcase.gif)
-    - [Code Repo](https://bitbucket.org/itsjustnae/types-variableslab/src/master/) -  Exericise: Using Test Cases in JUnit to understand datatype instances
+       - [Code Repo](https://bitbucket.org/itsjustnae/types-variableslab/src/master/) -  Exericise: Using Test Cases in JUnit to understand datatype instances

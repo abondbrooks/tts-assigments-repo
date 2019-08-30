@@ -24,4 +24,4 @@
 - Dice Game  - Exercise: Create a Roll the Dice Game 
     * Compiled View
          ![](rolldice.gif)
-       - [Code Repo]() - Bitbucket
+       - [Code Repo](https://bitbucket.org/itsjustnae/dicegame/src/master/) - Bitbucket

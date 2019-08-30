@@ -21,7 +21,7 @@
     * Compiled View - Exericise: Using Test Cases in JUnit to understand datatype instances
          ![Alt Text](testcase.gif)
        - [Code Repo](https://bitbucket.org/itsjustnae/types-variableslab/src/master/) - Bitbucket
-- Dice Game  - Exercise: Create a Roll the Dice Game 
-    * Compiled View
+- Dice Game   
+    * Compiled View - Exercise: Create a Roll the Dice Game
          ![](rolldice.gif)
        - [Code Repo](https://bitbucket.org/itsjustnae/dicegame/src/master/) - Bitbucket

@@ -18,9 +18,10 @@
        - [Code Repo](https://bitbucket.org/itsjustnae/bootstraphw/src/master/) - Bitbucket
 ## Java (Lab/Homework) --> Checkout My Personal Java Projects [Repo](https://github.com/azanaebondbrooks/java-mania-repo)
 - Java Type And Variables
-    * Compiled View
+    * Compiled View - Exericise: Using Test Cases in JUnit to understand datatype instances
          ![Alt Text](testcase.gif)
-       - [Code Repo](https://bitbucket.org/itsjustnae/types-variableslab/src/master/) -  Exericise: Using Test Cases in JUnit to understand datatype instances
-- Dice Game 
+       - [Code Repo](https://bitbucket.org/itsjustnae/types-variableslab/src/master/) - Bitbucket
+- Dice Game  - Exercise: Create a Roll the Dice Game 
     * Compiled View
-        - ![](rolldice.gif)
+         ![](rolldice.gif)
+       - [Code Repo]() - Bitbucket

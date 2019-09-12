@@ -1,10 +1,10 @@
 # Myangularproject
 
-![Alt Text](angularproject.png)
+![](../angularproject.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
-- [Live Demo](https://bootstraphw.netlify.com/) - 
+- [Live Demo](https://myangularproject.netlify.com/) - Exercise: Build a Simple Web Application in Angular
        - [Code Repo](https://bitbucket.org/itsjustnae/myangularproject/src/master/) - Bitbucket
 ## Build
 

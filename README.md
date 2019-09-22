@@ -16,6 +16,9 @@
 - Bootstrap and MVC, MVVM (Under Construction)
     - [Live Demo](https://bootstraphw.netlify.com/) - Exercise: Create a basic html page. It should include the jQuery library. Add some simple content
        - [Code Repo](https://bitbucket.org/itsjustnae/bootstraphw/src/master/) - Bitbucket
+- Angular Basics
+    - [Live Demo](https://myangularproject.netlify.com/) - Exercise: Build a Simple Web Application using Angular
+      - [Code Repo](https://bitbucket.org/itsjustnae/myangularproject/src/master/) - Bitbucket
 ## Java (Lab/Homework) --> Checkout My Personal Java Projects [Repo](https://github.com/azanaebondbrooks/java-mania-repo)
 - Java Type And Variables
     * Compiled View - Exericise: Using Test Cases in JUnit to understand datatype instances

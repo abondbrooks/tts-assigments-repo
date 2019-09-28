@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to tts-dashboard-client!');
+    expect(page.getTitleText()).toEqual('tts-dashboard-client app is running!');
   });
 
   afterEach(async () => {

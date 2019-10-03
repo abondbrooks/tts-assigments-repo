@@ -1,22 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { ProductService } from './shared/product.service';
-import { ProductComponent } from './products/product/product.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
+import { DashboardListComponent } from './dashboard/dashboard-list/dashboard-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ProductsComponent,
-    ProductListComponent
+    DashboardComponent,
+    DashboardListComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
+
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

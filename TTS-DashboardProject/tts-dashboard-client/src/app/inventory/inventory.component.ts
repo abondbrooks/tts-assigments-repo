@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product';
-import { ProductService } from 'src/app/shared/product.service';
+import { Product } from '../models/product';
+import { ProductService } from '../shared/product.service';
 
 @Component({
-  selector: 'app-dashboard-list',
-  templateUrl: './dashboard-list.component.html',
-  styleUrls: ['./dashboard-list.component.css']
+  selector: 'app-inventory',
+  templateUrl: './inventory.component.html',
+  styleUrls: ['./inventory.component.css']
 })
-export class DashboardListComponent implements OnInit {
+export class InventoryComponent implements OnInit {
   products: Product[];
 
   constructor(private productService: ProductService) { }
@@ -20,4 +20,9 @@ export class DashboardListComponent implements OnInit {
     this.productService.getProducts()
       .subscribe(products => this.products = products);
   }
+
+refresh(){
+    location.reload();
+  }
+
 }

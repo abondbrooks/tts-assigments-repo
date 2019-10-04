@@ -1,0 +1,37 @@
+
+<div class="table_wrapper">
+  <div class="menu">
+  <button class="btn button" (click)="refresh()">refresh</button>
+</div>
+<table class="" cellspacing="0">
+  <thead>
+    <tr>
+      <th style="width:5%;">#</th>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Full Price</th>
+      <th>Sale Price</th>
+      <th>Availability</th>
+      <th>Supplier</th>
+    </tr>
+  </thead>
+  <tbody id="content">
+    <tr *ngFor="let product of products | paginate: { itemsPerPage: 14, currentPage: p }">
+      <td>{{product.id}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.category.categoryName}}</td>
+      <td>{{product.fullPrice}}</td>
+      <td>{{product.salePrice}}</td>
+      <td>{{product.availability}}</td>
+      <td>{{product.supplier.supplierName}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  <footer>
+    <div class="pagination_footer">
+      <pagination-controls class="myPagination" (pageChange)="p = $event">
+      </pagination-controls>
+    </div>
+  </footer>

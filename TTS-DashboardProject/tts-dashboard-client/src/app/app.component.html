@@ -1,1 +1,19 @@
-<app-dashboard></app-dashboard>
+<!-- Grid Dashboard Layout -->
+<div class="grid-container">
+  <header class="header">
+
+  </header>
+  <aside class="sidenav">
+    <ul class="sidenav__list">
+      <li class="sidenav__list-item" routerLink="/home" routerLinkActive="active">Home</li>
+      <li class="sidenav__list-item" routerLink="/inventory" routerLinkActive="active">Inventory</li>
+      <li class="sidenav__list-item" routerLink="/report" routerLinkActive="active">Report</li>
+      <li class="sidenav__list-item" routerLink="/settings" routerLinkActive="active">Settings</li>
+    </ul>
+  </aside>
+  <main class="main" style="color:#fff;"><router-outlet></router-outlet></main>
+  <footer class="footer">
+        <p>2019 AZana Bond-Brooks | Dashboard Project</p>
+  </footer>
+</div>
+

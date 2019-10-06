@@ -3,30 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { ReportComponent } from './report/report.component';
-import { SettingsComponent } from './settings/settings.component';
-import { HomeComponent } from './home/home.component';
-import { ProductService } from './shared/product.service';
-import { HttpClientModule } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { CategoryPageComponent } from './pages/category-page/category-page.component';
+import { SupplierPageComponent } from './pages/supplier-page/supplier-page.component';
+import { AddProductComponent } from './forms/add-product/add-product.component';
+import { AddCategoryComponent } from './forms/add-category/add-category.component';
+import { AddSupplierComponent } from './forms/add-supplier/add-supplier.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    InventoryComponent,
-    ReportComponent,
-    SettingsComponent,
-    HomeComponent
+    DashboardPageComponent,
+    CategoryPageComponent,
+    SupplierPageComponent,
+    AddProductComponent,
+    AddCategoryComponent,
+    AddSupplierComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NgxPaginationModule
+    AppRoutingModule
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

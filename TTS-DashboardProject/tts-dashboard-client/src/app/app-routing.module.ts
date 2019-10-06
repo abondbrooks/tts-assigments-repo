@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { ReportComponent } from './report/report.component';
-import { SettingsComponent } from './settings/settings.component';
-import { HomeComponent } from './home/home.component';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { CategoryPageComponent } from './pages/category-page/category-page.component';
+import { SupplierPageComponent } from './pages/supplier-page/supplier-page.component';
 
 
 const routes: Routes = [
-{path:'home', component: HomeComponent },
-{path:'inventory', component:InventoryComponent},
-{path:'report', component:ReportComponent},
-{path:'settings', component:SettingsComponent},
-
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardPageComponent},
+  { path: 'categories', component: CategoryPageComponent},
+  { path: 'suppliers', component: SupplierPageComponent},
 ];
 
 @NgModule({

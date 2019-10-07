@@ -1,27 +1,61 @@
 <!-- DASHBOARD PANEL -->
 <div class="dashboard-panel">
-    <div class="dashboard-panel-description">
-      <div class="dashboard-icon">
-          <i class="material-icons dashboard-icon">
-              business
-              </i>
-      </div>
-      <div class="dashboard-title">
-        <h1>Suppliers</h1>
-      </div>
+  <!-- DASHBOARD PANEL START -->
+  <div class="dashboard-panel-description">
+    <div class="dashboard-icon">
+      <i class="material-icons dashboard-icon">
+        business
+      </i>
     </div>
+    <div class="dashboard-title">
+      <h1>Suppliers</h1>
+    </div>
+    <div class="dashboard-button">
+      <button class="pure-material-button-contained" routerLink="/add-supplier" routerLinkActive="active"><span>+
+          Add</span></button>
+    </div>
+  </div>
+  <!-- DASHBOARD PANEL MIDDLE -->
+  <!-- SEARCH BOX  -->
 
-    <!-- TABLE SECTION -->
-    <div class="inventory-box">
-      <div class="inventory-box-header">
-        <div class="form-space">
-          <h3 class="inventory-box-title">MODIFY </h3>
-        </div>
-      </div>
-      <div class="stats-description">
-        <div class="stats-title">
-          <h2>[GENERATED VALUE]</h2>
-        </div>
+
+  <!-- SEARCH BOX  -->
+  <!-- INVENTORY TABLE BOX START -->
+  <div class="inventory-box">
+    <div class="inventory-box-header">
+      <h3 class="inventory-box-title" *ngIf="suppliers">SUPPLIERS ({{suppliers.length}})</h3>
+    </div>
+    <div class="stats-description">
+      <table cellspacing="0">
+        <thead>
+          <tr>
+            <th style="width:5%;">#</th>
+            <th>Supplier Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="content">
+          <tr *ngFor="let supplier of suppliers | paginate:{itemsPerPage: 10 , currentPage: p}">
+            <td>{{supplier.id}}</td>
+            <td>{{supplier.supplierName}}</td>
+            <td>
+              <i class="material-icons" style="font-size:45px;">
+                settings_applications
+              </i>
+              <i class="material-icons" style="font-size:45px;">
+                delete
+              </i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="page-footer">
+        <pagination-controls class="myPagination" (pageChange)="p= $event"></pagination-controls>
       </div>
     </div>
   </div>
+  <!-- INVENTORY TABLE BOX END -->
+
+
+  <!-- DASHBOARD PANEL END -->
+</div>

@@ -10,6 +10,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AddProductComponent } from './forms/add-product/add-product.component';
 import { AddCategoryComponent } from './forms/add-category/add-category.component';
+import { AddSupplierComponent } from './forms/add-supplier/add-supplier.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AddCategoryComponent } from './forms/add-category/add-category.componen
     ProductPageComponent,
     AddProductComponent,
     AddCategoryComponent,
+    AddSupplierComponent,
 
 
 

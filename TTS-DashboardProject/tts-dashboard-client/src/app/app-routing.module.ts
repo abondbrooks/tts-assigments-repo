@@ -6,6 +6,7 @@ import { SupplierPageComponent } from './pages/supplier-page/supplier-page.compo
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AddProductComponent } from './forms/add-product/add-product.component';
 import { AddCategoryComponent } from './forms/add-category/add-category.component';
+import { AddSupplierComponent } from './forms/add-supplier/add-supplier.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'suppliers', component: SupplierPageComponent },
   { path: 'add-product', component: AddProductComponent },
   { path: 'add-category', component: AddCategoryComponent },
+  { path: 'add-supplier', component: AddSupplierComponent },
   {
     path: '',
     redirectTo: '/dashboard',

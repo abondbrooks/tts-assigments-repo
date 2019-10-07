@@ -24,7 +24,7 @@ A product dashboard, used internally by a company, that uses a RESTful API servi
 
 
 
-## Original Project Instructions
+## Project Instructions
 
 For the project, imagine you have been tasked with building a product dashboard that your company will use internally. There are a few requirements:
 

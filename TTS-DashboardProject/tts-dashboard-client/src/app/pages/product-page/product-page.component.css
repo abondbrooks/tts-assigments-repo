@@ -13,7 +13,7 @@
 }
 
 .dashboard-icon {
-  color: #b7245c;
+  color: #4da1ff;
   font-size: 55px;
 }
 
@@ -85,7 +85,7 @@
 
 .inventory-box {
   cursor: pointer;
-  width: 50%;
+  width: 93%;
   height: auto;
   display: inline-block;
   background: #2A2735;
@@ -281,3 +281,57 @@ thead {
 }
 
 /* MEDIA QUERIES  */
+
+@media only screen and (min-width:320px) and (max-width:424px) {
+  .inventory-box{
+    width:93%;
+  }
+} 
+@media only screen and (min-width:425px) and (max-width:639px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:640px) and (max-width:767px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:959px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:960px) and (max-width:1023px) {
+  .stats-box{
+    width: 93%;
+  }
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:1024px) and (max-width:1365px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:1366px) and (max-width:1439px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:1440px) and (max-width:1919px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:1920px) and (max-width:2559px) {
+  .inventory-box {
+    width: 93%;
+  }
+}
+@media only screen and (min-width:2560px) and (max-width:3839px) {
+  .inventory-box{
+    width: 51.2%;
+  }
+} 
